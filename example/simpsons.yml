@@ -1,5 +1,6 @@
 options:
-  display_name: "%{nick} %{surname}"
+  label_format: |
+    %{name.nick} %{name.surname}<br /><font color="gray">%{years}</font>
   name_format:
     2: [nick, surname]
 
