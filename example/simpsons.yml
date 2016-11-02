@@ -1,0 +1,47 @@
+options:
+  display_name: "%{nick} %{surname}"
+  name_format:
+    2: [nick, surname]
+
+people:
+  bart:
+    name: [Bart, Simpson]
+    gender: m
+  lisa:
+    name: [Lisa, Simpson]
+    gender: f
+  maggie:
+    name: [Maggie, Simpson]
+    gender: f
+  marge:
+    name: [Marge, Simpson]
+    gender: f
+  homer:
+    name: [Homer, Simpson]
+    gender: m
+  abe:
+    name: [Abe, Simpson]
+    gender: m
+  mona:
+    name: [Mona, Simpson]
+    gender: f
+  patty:
+    name: [Patty, Bouvier]
+    gender: f
+  selma:
+    name: [Selma, Bouvier]
+    gender: f
+  jacqueline:
+    name: [Jacqueline, Bouvier]
+    gender: f
+  clancy:
+    name: [Clancy, Bouvier]
+    gender: m
+
+families:
+  - parents: [homer, marge]
+    offsprings: [bart, lisa, maggie]
+  - parents: [abe, mona]
+    offsprings: [homer]
+  - parents: [jacqueline, clancy]
+    offsprings: [marge, patty, selma]

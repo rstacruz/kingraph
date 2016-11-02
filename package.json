@@ -1,0 +1,17 @@
+{
+  "name": "family-tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.6.1",
+    "meow": "^3.7.0",
+    "read-input": "^0.3.1"
+  }
+}
