@@ -22,3 +22,7 @@ require('read-input')(cli.input)
     console.log(render(input))
   })
 })
+.catch(err => {
+  console.error(err)
+  process.exit(8)
+})

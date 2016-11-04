@@ -13,8 +13,10 @@
   "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
   "license": "MIT",
   "dependencies": {
-    "js-yaml": "^3.6.1",
-    "meow": "^3.7.0",
-    "read-input": "^0.3.1"
+    "js-yaml": "3.6.1",
+    "meow": "3.7.0",
+    "object-loops": "0.8.0",
+    "read-input": "0.3.1",
+    "strip-indent": "2.0.0"
   }
 }
