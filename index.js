@@ -50,7 +50,7 @@ function renderFamily (family, id) {
       m${id} [shape=diamond, label="", height=0.1, width=0.1, style=filled, color="${color}"];
       {rank=same; "${parents.join('", "')}"};
       ${parents.map(parent => {
-        return `"${parent}":e -> m${id} [color="${color}", dir=back, arrowtail=tee];`
+        return `"${parent}":e -> m${id} [color="${color}"];`
       }).join('\n')}
     ` : ''}
 
@@ -64,7 +64,7 @@ function renderFamily (family, id) {
     ` : ''}
 
     ${offsprings.length > 1 ? `
-      {"${offsprings.join('" -> "')}" [style=invis]};
+      {"${offsprings.join('" -> "')}" [style=invis, weight=5]};
     ` : ''}
   `)
 }
