@@ -57,9 +57,9 @@ function renderFamily (family, id) {
     ${offsprings.length > 0 ? `
       k${id} [shape=circle, label="", height=0.01, width=0.01];
       {rank=same; "${offsprings.join('", "')}"};
-      m${id} -> k${id} [color="${color}"];
+      m${id} -> k${id} [color="${color}", weight=10];
       ${offsprings.map(kid => {
-        return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee];`
+        return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee, weight=2];`
       }).join('\n')}
     ` : ''}
 
