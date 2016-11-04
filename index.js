@@ -62,6 +62,10 @@ function renderFamily (family, id) {
         return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee];`
       }).join('\n')}
     ` : ''}
+
+    ${offsprings.length > 1 ? `
+      {"${offsprings.join('" -> "')}" [style=invis]};
+    ` : ''}
   `)
 }
 
