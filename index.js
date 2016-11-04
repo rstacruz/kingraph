@@ -13,6 +13,12 @@ const COLORS = [
   '#e74c3c'
 ]
 
+const SYMBOLS = {
+  male: '♂',
+  female: '♀',
+  deceased: '†'
+}
+
 function render (data) {
   var output = []
 
@@ -36,7 +42,14 @@ function render (data) {
 }
 
 function renderPerson (person, id) {
-  const label = person.name
+  const label =
+    '<table align="center" border="0" cellpadding="0" cellspacing="2" width="4">' +
+    '<tr><td align="center">' +
+    `${person.name}</td></tr>` +
+    '<tr><td align="center">' +
+    '<font point-size="10" color="#aaaaaa">' +
+    `${person.fullname || person.name}</font></td></tr></table>`
+
   return `"${id}" [label=<${label}>];`
 }
 
@@ -59,7 +72,7 @@ function renderFamily (family, id) {
       {rank=same; "${offsprings.join('", "')}"};
       m${id} -> k${id} [color="${color}", weight=10];
       ${offsprings.map(kid => {
-        return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee, weight=2];`
+        return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee, arrowsize=2, weight=2];`
       }).join('\n')}
     ` : ''}
 
@@ -82,9 +95,7 @@ function normalizePeople (people, options) {
  */
 
 function normalizePerson (person, options) {
-  return Object.assign({}, person, {
-    name: `${person.name[0]} ${person.name[person.name.length - 1]}`
-  })
+  return person
 }
 
 /*
