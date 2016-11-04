@@ -23,7 +23,7 @@ function render (data) {
     digraph G {
       # Header
       edge [dir=none, color="#cccccc"];
-      node [shape=box, fontname="sans-serif", width=4, color="#cccccc"];
+      node [shape=box, fontname="sans-serif", width=2.5, color="#cccccc"];
       rankdir=LR;
       ranksep=0.4;
       splines=ortho;
@@ -37,7 +37,7 @@ function render (data) {
 
 function renderPerson (person, id) {
   const label = person.name
-  return `"${id}" [fillcolor="blue;0.02:white", label=<${label}>];`
+  return `"${id}" [label=<${label}>];`
 }
 
 function renderFamily (family, id) {
@@ -45,18 +45,23 @@ function renderFamily (family, id) {
   const parents = family.parents || []
   const offsprings = family.offsprings || []
   return redent(`
-    # Family ${id}
-    m${id} [shape=diamond, label="", height=0.2, width=0.2, style=filled, color="${color}"];
-    k${id} [shape=circle, label="", height=0.01, width=0.01];
-    {rank=same; "${parents.join('", "')}"};
-    {rank=same; "${offsprings.join('", "')}"};
-    ${parents.map(parent => {
-      return `"${parent}":e -> m${id} [color="${color}"];`
-    }).join('\n')}
-    m${id} -> k${id} [color="${color}"];
-    ${offsprings.map(kid => {
-      return `k${id} -> "${kid}":w [color="${color}"];`
-    }).join('\n')}
+    ${parents.length > 0 ? `
+      # Family ${id}
+      m${id} [shape=diamond, label="", height=0.1, width=0.1, style=filled, color="${color}"];
+      {rank=same; "${parents.join('", "')}"};
+      ${parents.map(parent => {
+        return `"${parent}":e -> m${id} [color="${color}", dir=back, arrowtail=tee];`
+      }).join('\n')}
+    ` : ''}
+
+    ${offsprings.length > 0 ? `
+      k${id} [shape=circle, label="", height=0.01, width=0.01];
+      {rank=same; "${offsprings.join('", "')}"};
+      m${id} -> k${id} [color="${color}"];
+      ${offsprings.map(kid => {
+        return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee];`
+      }).join('\n')}
+    ` : ''}
   `)
 }
 
@@ -73,7 +78,9 @@ function normalizePeople (people, options) {
  */
 
 function normalizePerson (person, options) {
-  return person
+  return Object.assign({}, person, {
+    name: `${person.name[0]} ${person.name[person.name.length - 1]}`
+  })
 }
 
 /*
