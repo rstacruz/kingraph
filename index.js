@@ -2,6 +2,17 @@ const redent = require('strip-indent')
 const map = require('object-loops/map')
 const values = require('object-loops/values')
 
+const COLORS = [
+  '#1abc9c',
+  '#2ecc71',
+  '#3498db',
+  '#9b59b6',
+  '#34495e',
+  '#f1c40f',
+  '#e67e22',
+  '#e74c3c'
+]
+
 function render (data) {
   var output = []
 
@@ -11,11 +22,11 @@ function render (data) {
   return redent(`
     digraph G {
       # Header
-      edge [dir=none];
-      node [shape=box, fontname="sans-serif", width=2];
+      edge [dir=none, color="#cccccc"];
+      node [shape=box, fontname="sans-serif", width=4, color="#cccccc"];
       rankdir=LR;
       ranksep=0.4;
-      splines=polyline;
+      splines=ortho;
 
       # People
       ${values(map(people, renderPerson)).join('\n')}
@@ -26,24 +37,25 @@ function render (data) {
 
 function renderPerson (person, id) {
   const label = person.name
-  return `"${id}" [color="blue", label=<${label}>];`
+  return `"${id}" [fillcolor="blue;0.02:white", label=<${label}>];`
 }
 
 function renderFamily (family, id) {
+  const color = COLORS[id % COLORS.length]
   const parents = family.parents || []
   const offsprings = family.offsprings || []
   return redent(`
     # Family ${id}
-    m${id} [shape=diamond, label="", height=0.2, width=0.2];
+    m${id} [shape=diamond, label="", height=0.2, width=0.2, style=filled, color="${color}"];
     k${id} [shape=circle, label="", height=0.01, width=0.01];
     {rank=same; "${parents.join('", "')}"};
     {rank=same; "${offsprings.join('", "')}"};
     ${parents.map(parent => {
-      return `"${parent}":e -> m${id};`
+      return `"${parent}":e -> m${id} [color="${color}"];`
     }).join('\n')}
-    m${id} -> k${id};
+    m${id} -> k${id} [color="${color}"];
     ${offsprings.map(kid => {
-      return `k${id} -> "${kid}":w;`
+      return `k${id} -> "${kid}":w [color="${color}"];`
     }).join('\n')}
   `)
 }
