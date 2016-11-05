@@ -36,13 +36,13 @@ function render (data) {
       ${applyStyle(data, [':digraph'], { sep: '; ' })};
 
       # People
-      ${values(map(people, renderPerson)).join('\n')}
-      ${values(map(families, renderFamily)).join('')}
+      ${values(map(people, (p, id) => renderPerson(p, id, data))).join('\n')}
+      ${values(map(families, (f, id) => renderFamily(f, id, data))).join('')}
     }
   `)
 }
 
-function renderPerson (person, id) {
+function renderPerson (person, id, data) {
   const label =
     '<table align="center" border="0" cellpadding="0" cellspacing="2" width="4">' +
     '<tr><td align="center">' +
@@ -51,17 +51,17 @@ function renderPerson (person, id) {
     '<font point-size="10" color="#aaaaaa">' +
     `${person.fullname || person.name}</font></td></tr></table>`
 
-  return `"${id}" [label=<${label}>];`
+  return `"${id}" [label=<${label}>, ${applyStyle(data, person.class || [])}];`
 }
 
-function renderFamily (family, id) {
+function renderFamily (family, id, data) {
   const color = COLORS[id % COLORS.length]
   const parents = family.parents || []
   const offsprings = family.offsprings || []
   return redent(`
     ${parents.length > 0 ? `
       # Family ${id}
-      m${id} [shape=diamond, label="", height=0.1, width=0.1, style=filled, color="${color}"];
+      m${id} [color="${color}", ${applyStyle(data, [':union'])}];
       {rank=same; "${parents.join('", "')}"};
       ${parents.map(parent => {
         return `"${parent}":e -> m${id} [color="${color}"];`
@@ -73,7 +73,7 @@ function renderFamily (family, id) {
     ` : ''}
 
     ${offsprings.length > 0 ? `
-      k${id} [shape=circle, label="", height=0.01, width=0.01];
+      k${id} [${applyStyle(data, [':children'])}];
       {rank=same; "${offsprings.join('", "')}"};
       ${offsprings.map(kid => {
         return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee, arrowsize=2, weight=2];`
