@@ -65,6 +65,7 @@ function renderFamily (family, id, data) {
 
   function renderParents () {
     return [
+      '',
       `# Family ${id}`,
       `m${id} [color="${color}", ${applyStyle(data, [':union'])}];`,
       `{rank=same; "${parents.join('", "')}"};`,
