@@ -36,22 +36,28 @@ function render (data) {
       ${applyStyle(data, [':digraph'], { sep: '; ' })};
 
       # People
-      ${values(map(people, (p, id) => renderPerson(p, id, data))).join('\n')}
-      ${values(map(families, (f, id) => renderFamily(f, id, data))).join('')}
+      ${values(map(people, (p, id) => renderPerson(p || {}, id, data))).join('\n')}
+      ${values(map(families, (f, id) => renderFamily(f || {}, id, data))).join('')}
     }
   `)
 }
 
 function renderPerson (person, id, data) {
-  const label =
-    '<table align="center" border="0" cellpadding="0" cellspacing="2" width="4">' +
-    '<tr><td align="center">' +
-    `${person.name || id}</td></tr>` +
-    '<tr><td align="center">' +
-    '<font point-size="10" color="#aaaaaa">' +
-    `${person.fullname || person.name}</font></td></tr></table>`
+  let label
 
-  return `"${id}" [label=<${label}>, ${applyStyle(data, person.class || [])}];`
+  if (person.name || person.fullname) {
+    label =
+      '<<table align="center" border="0" cellpadding="0" cellspacing="2" width="4">' +
+      '<tr><td align="center">' +
+      `${person.name || id}</td></tr>` +
+      '<tr><td align="center">' +
+      '<font point-size="10" color="#aaaaaa">' +
+      `${person.fullname || person.name}</font></td></tr></table>>`
+  } else {
+    label = JSON.stringify(id)
+  }
+
+  return `"${id}" [label=${label}, ${applyStyle(data, person.class || [])}];`
 }
 
 function renderFamily (family, id, data) {
