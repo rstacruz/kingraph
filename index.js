@@ -2,6 +2,7 @@ const redent = require('strip-indent')
 const map = require('object-loops/map')
 const values = require('object-loops/values')
 const normalize = require('./lib/normalize')
+const applyStyle = require('./lib/apply_style')
 
 const COLORS = [
   '#1abc9c',
@@ -30,11 +31,9 @@ function render (data) {
   return redent(`
     digraph G {
       # Header
-      edge [dir=none, color="#cccccc"];
-      node [shape=box, fontname="sans-serif", width=2.5, color="#cccccc"];
-      rankdir=LR;
-      ranksep=0.4;
-      splines=ortho;
+      edge [${applyStyle(data, [':edge'])}];
+      node [${applyStyle(data, [':node'])}];
+      ${applyStyle(data, [':digraph'], { sep: '; ' })};
 
       # People
       ${values(map(people, renderPerson)).join('\n')}
