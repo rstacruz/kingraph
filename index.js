@@ -15,14 +15,16 @@ function render (data) {
 
   return join([
     'digraph G {',
-    '# Header',
-    `edge [${applyStyle(data, [':edge'])}];`,
-    `node [${applyStyle(data, [':node'])}];`,
-    `${applyStyle(data, [':digraph'], { sep: '; ' })};`,
-    '',
-    '# People',
-    values(map(people, (p, id) => renderPerson(p || {}, id, data))),
-    values(map(families, (f, id) => renderFamily(f || {}, id, data))),
+    { indent: [
+      '# Header',
+      `edge [${applyStyle(data, [':edge'])}];`,
+      `node [${applyStyle(data, [':node'])}];`,
+      `${applyStyle(data, [':digraph'], { sep: '; ' })};`,
+      '',
+      '# People',
+      values(map(people, (p, id) => renderPerson(p || {}, id, data))),
+      values(map(families, (f, id) => renderFamily(f || {}, id, data))),
+    ]},
     '}'
   ], { sep: '\n' })
 }
