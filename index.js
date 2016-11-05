@@ -1,6 +1,7 @@
 const redent = require('strip-indent')
 const map = require('object-loops/map')
 const values = require('object-loops/values')
+const normalize = require('./lib/normalize')
 
 const COLORS = [
   '#1abc9c',
@@ -20,9 +21,10 @@ const SYMBOLS = {
 }
 
 function render (data) {
+  data = normalize(data)
   var output = []
 
-  const people = normalizePeople(data.people || [], data.options || {})
+  const people = data.people
   const families = data.families || []
 
   return redent(`
@@ -45,7 +47,7 @@ function renderPerson (person, id) {
   const label =
     '<table align="center" border="0" cellpadding="0" cellspacing="2" width="4">' +
     '<tr><td align="center">' +
-    `${person.name}</td></tr>` +
+    `${person.name || id}</td></tr>` +
     '<tr><td align="center">' +
     '<font point-size="10" color="#aaaaaa">' +
     `${person.fullname || person.name}</font></td></tr></table>`
@@ -67,10 +69,13 @@ function renderFamily (family, id) {
       }).join('\n')}
     ` : ''}
 
+    ${(offsprings.length > 0 && parents.length > 0) ? `
+      m${id} -> k${id} [color="${color}", weight=10];
+    ` : ''}
+
     ${offsprings.length > 0 ? `
       k${id} [shape=circle, label="", height=0.01, width=0.01];
       {rank=same; "${offsprings.join('", "')}"};
-      m${id} -> k${id} [color="${color}", weight=10];
       ${offsprings.map(kid => {
         return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee, arrowsize=2, weight=2];`
       }).join('\n')}
@@ -80,22 +85,6 @@ function renderFamily (family, id) {
       {"${offsprings.join('" -> "')}" [style=invis, weight=5]};
     ` : ''}
   `)
-}
-
-/**
- * Normalizes people options.
- */
-
-function normalizePeople (people, options) {
-  return map(people, p => normalizePerson(p, options))
-}
-
-/**
- * Normalizes person names and such.
- */
-
-function normalizePerson (person, options) {
-  return person
 }
 
 /*
