@@ -5,7 +5,7 @@ options:
     2: [nick, surname]
 
 people:
-  bart:
+  Bart:
     name: Bart
     fullname: Bart Simpson
     gender: m
@@ -17,43 +17,43 @@ people:
     name: Maggie
     fullname: Maggie Simpson
     gender: f
-  marge:
+  Marge:
     name: Marge
     fullname: Marjorie Jacqueline Simpson
     gender: f
-  homer:
+  Homer:
     name: Homer
     fullname: Homer Simpson
     gender: m
-  abe:
+  Abe:
     name: Abe
     fullname: Abe Simpson
     gender: m
-  mona:
+  Mona:
     name: Mona
     fullname: Mona Simpson
     gender: f
-  patty:
+  Patty:
     name: Patty
     fullname: Patty Bouvier
     gender: f
-  selma:
+  Selma:
     name: Selma
     fullname: Selma Bouvier
     gender: f
-  jacqueline:
+  Jacqueline:
     name: Jacqueline
     fullname: Jacqueline Bouvier
     gender: f
-  clancy:
+  Clancy:
     name: Clancy
     fullname: Clancy Bouvier
     gender: m
 
 families:
-  - parents: [homer, marge]
-    offsprings: [bart, lisa, maggie]
-  - parents: [abe, mona]
-    offsprings: [homer]
-  - parents: [jacqueline, clancy]
-    offsprings: [marge, patty, selma]
+  - parents: [Homer, Marge]
+    children: [Bart, lisa, maggie]
+  - parents: [Abe, Mona]
+    children: [Homer]
+  - parents: [Jacqueline, Clancy]
+    children: [Marge, Patty, Selma]

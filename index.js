@@ -57,7 +57,7 @@ function renderPerson (person, id, data) {
 function renderFamily (family, id, data) {
   const color = COLORS[id % COLORS.length]
   const parents = family.parents || []
-  const offsprings = family.offsprings || []
+  const offsprings = family.children || []
   return redent(`
     ${parents.length > 0 ? `
       # Family ${id}
