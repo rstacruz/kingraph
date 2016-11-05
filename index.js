@@ -24,7 +24,7 @@ function render (data) {
     values(map(people, (p, id) => renderPerson(p || {}, id, data))),
     values(map(families, (f, id) => renderFamily(f || {}, id, data))),
     '}'
-  ], '\n')
+  ], { sep: '\n' })
 }
 
 function renderPerson (person, id, data) {
