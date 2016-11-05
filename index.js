@@ -57,31 +57,44 @@ function renderPerson (person, id, data) {
 function renderFamily (family, id, data) {
   const color = COLORS[id % COLORS.length]
   const parents = family.parents || []
-  const offsprings = family.children || []
+  const parents2 = family.parents2 || []
+  const children = family.children || []
+  const children2 = family.children2 || []
+
+  const hasParents = (parents.length + parents2.length) > 0
+  const hasChildren = (children.length + children.length) > 0
+  const hasManyChildren = (children.length + children.length) > 1
+
   return redent(`
-    ${parents.length > 0 ? `
+    ${(hasParents) ? `
       # Family ${id}
       m${id} [color="${color}", ${applyStyle(data, [':union'])}];
       {rank=same; "${parents.join('", "')}"};
       ${parents.map(parent => {
         return `"${parent}":e -> m${id} [color="${color}", ${applyStyle(data, [':parent-link'])}];`
       }).join('\n')}
-    ` : ''}
-
-    ${(offsprings.length > 0 && parents.length > 0) ? `
-      m${id} -> k${id} [color="${color}", weight=10, ${applyStyle(data, [':parent-link'])}];
-    ` : ''}
-
-    ${offsprings.length > 0 ? `
-      k${id} [${applyStyle(data, [':children'])}];
-      {rank=same; "${offsprings.join('", "')}"};
-      ${offsprings.map(kid => {
-        return `k${id} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link'])}];`
+      ${parents2.map(parent => {
+        return `"${parent}":e -> m${id} [color="${color}", ${applyStyle(data, [':parent-link', ':parent2-link'])}];`
       }).join('\n')}
     ` : ''}
 
-    ${offsprings.length > 1 ? `
-      {"${offsprings.join('" -> "')}" [style=invis, weight=5]};
+    ${(hasParents && hasChildren) ? `
+      m${id} -> k${id} [color="${color}", weight=10, ${applyStyle(data, [':parent-link'])}];
+    ` : ''}
+
+    ${hasChildren ? `
+      k${id} [${applyStyle(data, [':children'])}];
+      {rank=same; "${children.join('", "')}"};
+      ${children.map(kid => {
+        return `k${id} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link'])}];`
+      }).join('\n')}
+      ${children2.map(kid => {
+        return `k${id} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link', ':child2-link'])}];`
+      }).join('\n')}
+    ` : ''}
+
+    ${hasManyChildren > 1 ? `
+      {"${children.concat(children2).join('" -> "')}" [style=invis, weight=5]};
     ` : ''}
   `)
 }
