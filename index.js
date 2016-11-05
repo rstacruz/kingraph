@@ -25,8 +25,8 @@ function render (data) {
   data = normalize(data)
   var output = []
 
-  const people = data.people
-  const families = data.families || []
+  const people = data.people || {}
+  const families = data.families || {}
 
   return redent(`
     digraph G {
