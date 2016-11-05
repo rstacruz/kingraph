@@ -17,24 +17,24 @@ function render (data) {
       `node [${applyStyle(data, [':node'])}];`,
       `${applyStyle(data, [':digraph'], { sep: '; ' })};`,
       '',
-      renderHouse(data, [], data)
+      renderHouse(data, data, [])
     ]},
     '}'
   ], { indent: '  ' })
 }
 
-function renderHouse (house, path, data) {
+function renderHouse (data, house, path) {
   const people = house.people || {}
   const families = house.families || {}
 
   return [
     '# People',
-    values(map(people, (p, id) => renderPerson(p || {}, path.concat([id]), house, data))),
-    values(map(families, (f, id) => renderFamily(f || {}, path.concat([id]), house, data)))
+    values(map(people, (p, id) => renderPerson(data, house, p || {}, path.concat([id])))),
+    values(map(families, (f, id) => renderFamily(data, house, f || {}, path.concat([id]))))
   ]
 }
 
-function renderPerson (person, path, house, data) {
+function renderPerson (data, house, person, path) {
   let id = path[path.length - 1]
   let label
 
@@ -53,7 +53,7 @@ function renderPerson (person, path, house, data) {
   return `"${id}" [label=${label}, ${applyStyle(data, person.class || [])}];`
 }
 
-function renderFamily (family, path, house, data) {
+function renderFamily (data, house, family, path) {
   const id = path[path.length - 1] // uhh
   const color = COLORS[id % COLORS.length]
   const parents = family.parents || []
