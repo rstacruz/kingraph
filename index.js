@@ -10,26 +10,32 @@ function render (data) {
   data = normalize(data)
   var output = []
 
-  const people = data.people || {}
-  const families = data.families || {}
-
   return join([
     'digraph G {',
     { indent: [
-      '# Header',
       `edge [${applyStyle(data, [':edge'])}];`,
       `node [${applyStyle(data, [':node'])}];`,
       `${applyStyle(data, [':digraph'], { sep: '; ' })};`,
       '',
-      '# People',
-      values(map(people, (p, id) => renderPerson(p || {}, id, data))),
-      values(map(families, (f, id) => renderFamily(f || {}, id, data))),
+      renderHouse(data, [], data)
     ]},
     '}'
-  ], { sep: '\n' })
+  ], { indent: '  ' })
 }
 
-function renderPerson (person, id, data) {
+function renderHouse (house, path, data) {
+  const people = house.people || {}
+  const families = house.families || {}
+
+  return [
+    '# People',
+    values(map(people, (p, id) => renderPerson(p || {}, path.concat([id]), house, data))),
+    values(map(families, (f, id) => renderFamily(f || {}, path.concat([id]), house, data)))
+  ]
+}
+
+function renderPerson (person, path, house, data) {
+  let id = path[path.length - 1]
   let label
 
   if (person.name || person.fullname) {
@@ -47,7 +53,8 @@ function renderPerson (person, id, data) {
   return `"${id}" [label=${label}, ${applyStyle(data, person.class || [])}];`
 }
 
-function renderFamily (family, id, data) {
+function renderFamily (family, path, house, data) {
+  const id = path[path.length - 1] // uhh
   const color = COLORS[id % COLORS.length]
   const parents = family.parents || []
   const parents2 = family.parents2 || []
@@ -68,7 +75,7 @@ function renderFamily (family, id, data) {
   function renderParents () {
     return [
       '',
-      `# Family ${id}`,
+      `# Family ${JSON.stringify(path)}`,
       `m${id} [color="${color}", ${applyStyle(data, [':union'])}];`,
       `{rank=same; "${parents.join('", "')}"};`,
       parents.map(parent => {
