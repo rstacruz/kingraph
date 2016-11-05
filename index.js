@@ -64,19 +64,19 @@ function renderFamily (family, id, data) {
       m${id} [color="${color}", ${applyStyle(data, [':union'])}];
       {rank=same; "${parents.join('", "')}"};
       ${parents.map(parent => {
-        return `"${parent}":e -> m${id} [color="${color}"];`
+        return `"${parent}":e -> m${id} [color="${color}", ${applyStyle(data, [':parent-link'])}];`
       }).join('\n')}
     ` : ''}
 
     ${(offsprings.length > 0 && parents.length > 0) ? `
-      m${id} -> k${id} [color="${color}", weight=10];
+      m${id} -> k${id} [color="${color}", weight=10, ${applyStyle(data, [':parent-link'])}];
     ` : ''}
 
     ${offsprings.length > 0 ? `
       k${id} [${applyStyle(data, [':children'])}];
       {rank=same; "${offsprings.join('", "')}"};
       ${offsprings.map(kid => {
-        return `k${id} -> "${kid}":w [color="${color}", dir=forward, arrowhead=tee, arrowsize=2, weight=2];`
+        return `k${id} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link'])}];`
       }).join('\n')}
     ` : ''}
 
