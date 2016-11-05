@@ -1,0 +1,39 @@
+families:
+  - parents: [Ned, Catelyn]
+    children: [Robb, Sansa, Arya, Bran, Rickon]
+    children2: [Jon]
+  - parents: [Lyanna, Rhaegar]
+    children: [Jon]
+  - parents: [Hoster, Minisa]
+    children: [Catelyn, Lysa, Edmure, Robin Arryn, Brynden]
+  - parents: [Rickard, Lyarra]
+    children: [Ned, Lyanna, Brandon, Benjen]
+  - parents: [Sansa, Tyrion]
+  - parents: [Tywin, Joanna]
+    children: [Cersei, Jaime, Tyrion]
+  - parents: [Cersei, Jaime]
+    parents2: [Robert]
+    children: [Joffrey, Myrcella, Tommen]
+  - children: [Danaerys, Rhaegar, Viserys]
+
+people:
+  Hoster:
+    fullname: Hoster Tully
+  Minisa:
+    fullname: Minisa Whent
+  Robert:
+    fullname: Robert Baratheon
+  Cersei:
+    fullname: Cersei Lannister
+  Jaime:
+    fullname: Jaime "Kingslayer" Lannister
+  Rhaegar:
+    fullname: Rhaegar Targaryen
+  Danaerys:
+    fullname: Danaerys Targaryen
+  Viserys:
+    fullname: Viserys Targaryen
+proximity_hints:
+  - [Ned, Catelyn]
+  - [Tyrion, Sansa]
+  - [Rhaegar, Viserys, Danaerys]
