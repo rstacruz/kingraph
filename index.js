@@ -10,9 +10,11 @@ const COLORS = require('./lib/defaults/colors')
 
 const getId = idGenerator()
 
+const LINE = Array(76).join('#')
+const LINE2 = '# ' + Array(74).join('-')
+
 function render (data) {
   data = normalize(data)
-  var output = []
 
   return join([
     'digraph G {',
@@ -39,8 +41,10 @@ function renderHouse (data, house, path) {
   const houses = house.houses || {}
 
   const meat = [
+    // Sub-houses
     renderHouses(data, houses, path),
-    '# People',
+
+    // People and families
     values(map(people, (p, id) => renderPerson(data, house, p || {}, path.concat([id])))),
     values(map(families, (f, id) => renderFamily(data, house, f || {}, path.concat([id]))))
   ]
@@ -51,13 +55,18 @@ function renderHouse (data, house, path) {
     const name = house.name || path[path.length -1 ]
 
     return [
+      '',
+      LINE,
+      `# House ${path}`,
+      LINE,
+      '',
       `subgraph cluster_${slugify(path)} {`,
       { indent: [
         `label=<<b>${name}</b>>`,
-        applyStyle(data, [':house', `:house-${path.length}`])
+        applyStyle(data, [':house', `:house-${path.length}`]),
+        '',
+        meat
       ] },
-      '',
-      meat,
       '}'
     ]
   }
@@ -117,7 +126,10 @@ function renderFamily (data, house, family, path) {
   function renderParents () {
     return [
       '',
+      LINE2,
       `# Family ${JSON.stringify(path)}`,
+      LINE2,
+      '',
       `${union} [`,
       style([':union'], { color }),
       ']',

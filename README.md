@@ -4,7 +4,8 @@
 
 A family tree plotter with a very simple syntax. It probably doesn't cover everything you need, but covers 90% of it for the sake of simplicity.
 
-## Usage
+Usage
+-----
 
 It produces a [Graphviz digraph](http://www.graphviz.org/content/dot-language), so use it with dot.
 
@@ -12,7 +13,8 @@ It produces a [Graphviz digraph](http://www.graphviz.org/content/dot-language), 
 family-tree family.yml | dot -Tsvg > family.svg
 ```
 
-## Writing a family tree
+Getting started
+---------------
 
 Let's start with `families`. Every family can have `parents` and `children`.
 
@@ -79,7 +81,10 @@ Now `Marge` belongs in 2 houses. To fix this, add a `people` collection under th
 -    fullname: Marjorie Bouvier Simpson
 ```
 
-## More features
+More features
+-------------
+
+This is the part of the API that will help deal with bigger trees.
 
 ### Complex families
 
@@ -92,7 +97,38 @@ families:
     children2: [Jon]
 ```
 
-### Styling
+### Nested families
+
+You can put `families` within families. There's no need to do this, but it can help untangle knots by containing mega-families in the same bounding box.
+
+```yml
+families:
+  - parents: [Abe, Alice]
+    children: [Bob, Brandon]
+    families:
+    - parents: [Bob, Cassie]
+      children: [Dany]
+    - parents: [Brandon, Carol]
+      children: [Ethan]
+```
+
+### Nested houses
+
+Houses can nest to make sub-houses. Sub-house boxes will be placed inside house boxes.
+
+```yml
+houses:
+  Simpson:
+    families:
+      - parents: [Homer, Marge]
+        children: [Bart, Lisa, Maggie]
+    houses:
+      Simpson-Van Houten:
+        - parents: [Lisa, Milhouse]
+          children: [Zia]
+```
+
+## Styling
 
 Use `class` and `style` to style. Refer to Graphviz'z [attributes documentation](http://graphviz.org/doc/info/attrs.html) for possible attributes.
 
@@ -105,3 +141,4 @@ styles:
   deceased:
     color: red
 ```
+ 
