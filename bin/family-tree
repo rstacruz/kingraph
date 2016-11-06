@@ -6,12 +6,14 @@ const cli = require('meow')(`
     $ family-tree
 
   Options:
-    -h, --help       show usage information
-    -v, --version    print version info and exit
+    -h, --help         show usage information
+    -v, --version      print version info and exit
+    -F, --format=svg   format (dot, svg)
 `, {
   boolean: ['help', 'version'],
+  string: ['format'],
   alias: {
-    h: 'help', v: 'version'
+    h: 'help', v: 'version', F: 'format'
   }
 })
 
@@ -19,7 +21,13 @@ require('read-input')(cli.input)
 .then(res => {
   res.files.forEach(file => {
     var input = require('js-yaml').safeLoad(file.data)
-    console.log(render(input))
+    if (cli.flags.format === 'dot') {
+      console.log(render(input))
+    } else {
+      var dot = render(input)
+      var svg = require('viz.js')(dot, { format: 'svg', engine: 'dot' })
+      console.log(svg)
+    }
   })
 })
 .catch(err => {

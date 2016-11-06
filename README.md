@@ -7,10 +7,8 @@ A family tree plotter with a very simple syntax. It probably doesn't cover every
 Usage
 -----
 
-It produces a [Graphviz digraph](http://www.graphviz.org/content/dot-language), so use it with dot.
-
 ```
-family-tree family.yml | dot -Tsvg > family.svg
+family-tree family.yml > family.svg
 ```
 
 Getting started
