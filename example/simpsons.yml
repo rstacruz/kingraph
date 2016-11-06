@@ -9,11 +9,11 @@ people:
     name: Bart
     fullname: Bart Simpson
     gender: m
-  lisa:
+  Lisa:
     name: Lisa
     fullname: Lisa Simpson
     gender: f
-  maggie:
+  Maggie:
     name: Maggie
     fullname: Maggie Simpson
     gender: f
@@ -52,7 +52,7 @@ people:
 
 families:
   - parents: [Homer, Marge]
-    children: [Bart, lisa, maggie]
+    children: [Bart, Lisa, Maggie]
   - parents: [Abe, Mona]
     children: [Homer]
   - parents: [Jacqueline, Clancy]

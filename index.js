@@ -83,6 +83,10 @@ function renderFamily (data, house, family, path) {
     (hasManyChildren > 1) && renderKidLinks()
   ]
 
+  function style (classes, before) {
+    return { indent: applyStyle(data, classes, { before: (before || {}) }) }
+  }
+
   function renderParents () {
     return [
       '',
@@ -99,19 +103,13 @@ function renderFamily (data, house, family, path) {
       parents.map(parent => {
         return [
           `"${parent}":e -> ${union} [`,
-          { indent: [
-            applyStyle(data, [':parent-link'], { before: {
-              color: color
-            } }) ] },
+          style([':parent-link'], { color }),
           ']' ]
       }),
       parents2.map(parent => {
         return [
           `"${parent}":e -> ${union} [`,
-          { indent: [
-            applyStyle(data, [':parent-link', ':parent2-link'], { before: {
-              color: color
-            } }) ] },
+          style(data, [':parent-link', ':parent2-link'], { color }),
           ']' ]
       })
     ]
@@ -120,40 +118,34 @@ function renderFamily (data, house, family, path) {
   function renderLink () {
     return [
       `${union} -> ${kids} [`,
-      { indent: [
-        applyStyle(data, [':parent-link'], { before: {
-          weight: 10,
-          color: color
-        } }) ] },
+      style([':parent-link'], { weight: 10, color: color }),
       ']' ]
   }
 
   function renderKids () {
     return [
       `${kids} [`,
-      { indent: applyStyle(data, [':children']) },
+      style([':children']),
       `]`,
 
-      `{rank=same; "${children.join('", "')}"}`,
+      `{rank=same; ${children.map(c => JSON.stringify(c)).join(', ')}}`,
 
       children.map(kid => {
         return [
-          `${kids} -> "${kid}":w [`,
-          { indent: [
-            applyStyle(data, [':child-link'], { before: {
-              weight: 2,
-              color: color
-            } }) ] },
+          `${kids} -> ${JSON.stringify(kid)}:w [`,
+          style([':child-link'], {
+            weight: 2,
+            color: color
+          }),
           ']' ]
       }),
       children2.map(kid => {
         return [
-          `${kids} -> "${kid}":w [`,
-          { indent: [
-            applyStyle(data, [':child-link', ':child2-link'], { before: {
-              weight: 2,
-              color: color
-            } }) ] },
+          `${kids} -> ${JSON.stringify(kid)}:w [`,
+          style([':child-link', ':child2-link'], {
+            weight: 2,
+            color: color
+          }),
           ']' ]
       })
     ]
