@@ -33,7 +33,3 @@ people:
     fullname: Danaerys Targaryen
   Viserys:
     fullname: Viserys Targaryen
-proximity_hints:
-  - [Ned, Catelyn]
-  - [Tyrion, Sansa]
-  - [Rhaegar, Viserys, Danaerys]
