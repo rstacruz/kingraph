@@ -89,8 +89,9 @@ function renderFamily (data, house, family, path) {
       `# Family ${JSON.stringify(path)}`,
       `${union} [`,
       { indent: [
-        `color="${color}"`,
-        applyStyle(data, [':union']) ] },
+        applyStyle(data, [':union'], { before: {
+          color: color
+        } }) ] },
       ']',
       '',
       `{rank=same; "${parents.join('", "')}"}`,
@@ -99,16 +100,18 @@ function renderFamily (data, house, family, path) {
         return [
           `"${parent}":e -> ${union} [`,
           { indent: [
-            `color="${color}"`,
-            applyStyle(data, [':parent-link']) ] },
+            applyStyle(data, [':parent-link'], { before: {
+              color: color
+            } }) ] },
           ']' ]
       }),
       parents2.map(parent => {
         return [
           `"${parent}":e -> ${union} [`,
           { indent: [
-            `color="${color}"`,
-            applyStyle(data, [':parent-link', ':parent2-link']) ] },
+            applyStyle(data, [':parent-link', ':parent2-link'], { before: {
+              color: color
+            } }) ] },
           ']' ]
       })
     ]
@@ -118,9 +121,10 @@ function renderFamily (data, house, family, path) {
     return [
       `${union} -> ${kids} [`,
       { indent: [
-        `color="${color}"`,
-        'weight=10',
-        applyStyle(data, [':parent-link']) ] },
+        applyStyle(data, [':parent-link'], { before: {
+          weight: 10,
+          color: color
+        } }) ] },
       ']' ]
   }
 
@@ -136,18 +140,20 @@ function renderFamily (data, house, family, path) {
         return [
           `${kids} -> "${kid}":w [`,
           { indent: [
-            'weight=2',
-            `color="${color}"`,
-            applyStyle(data, [':child-link']) ] },
+            applyStyle(data, [':child-link'], { before: {
+              weight: 2,
+              color: color
+            } }) ] },
           ']' ]
       }),
       children2.map(kid => {
         return [
           `${kids} -> "${kid}":w [`,
           { indent: [
-            'weight=2',
-            `color="${color}"`,
-            applyStyle(data, [':child-link', ':child2-link']) ] },
+            applyStyle(data, [':child-link', ':child2-link'], { before: {
+              weight: 2,
+              color: color
+            } }) ] },
           ']' ]
       })
     ]
@@ -157,8 +163,10 @@ function renderFamily (data, house, family, path) {
     return [
       `{"${children.concat(children2).join('" -> "')}" [`,
       { indent: [
-        'style=invis',
-        'weight=5',
+        applyStyle(data, [':child-links'], { before: {
+          style: 'invis',
+          weight: 5
+        }})
       ] },
       ']' ]
   }
