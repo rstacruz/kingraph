@@ -92,10 +92,7 @@ function renderFamily (data, house, family, path) {
       '',
       `# Family ${JSON.stringify(path)}`,
       `${union} [`,
-      { indent: [
-        applyStyle(data, [':union'], { before: {
-          color: color
-        } }) ] },
+      style([':union'], { color }),
       ']',
       '',
       `{rank=same; "${parents.join('", "')}"}`,
@@ -109,7 +106,7 @@ function renderFamily (data, house, family, path) {
       parents2.map(parent => {
         return [
           `"${parent}":e -> ${union} [`,
-          style(data, [':parent-link', ':parent2-link'], { color }),
+          style([':parent-link', ':parent2-link'], { color }),
           ']' ]
       })
     ]
