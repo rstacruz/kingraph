@@ -25,6 +25,8 @@ houses:
         fullname: Cersei Lannister
       Jaime:
         fullname: Jaime "Kingslayer" Lannister
+      Tyrion:
+        fullname: Tyrion "The Imp" Lannister
 
   Targaryen:
     families:
