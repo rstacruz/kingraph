@@ -4,8 +4,11 @@ const values = require('object-loops/values')
 const slugify = require('./lib/slugify')
 const normalize = require('./lib/normalize')
 const applyStyle = require('./lib/apply_style')
+const idGenerator = require('./lib/id_generator')
 
 const COLORS = require('./lib/defaults/colors')
+
+const getId = idGenerator()
 
 function render (data) {
   data = normalize(data)
@@ -33,12 +36,37 @@ function render (data) {
 function renderHouse (data, house, path) {
   const people = house.people || {}
   const families = house.families || {}
+  const houses = house.houses || {}
 
-  return [
+  const meat = [
+    renderHouses(data, houses, path),
     '# People',
     values(map(people, (p, id) => renderPerson(data, house, p || {}, path.concat([id])))),
     values(map(families, (f, id) => renderFamily(data, house, f || {}, path.concat([id]))))
   ]
+
+  if (path.length === 0) {
+    return meat
+  } else {
+    const name = house.name || path[path.length -1 ]
+
+    return [
+      `subgraph cluster_${slugify(path)} {`,
+      { indent: [
+        `label=<<b>${name}</b>>`,
+        applyStyle(data, [':house', `:house-${path.length}`])
+      ] },
+      '',
+      meat,
+      '}'
+    ]
+  }
+}
+
+function renderHouses (data, houses, path) {
+  return values(map(houses, (house, id) => {
+    return renderHouse(data, house, path.concat([id]))
+  }))
 }
 
 function renderPerson (data, house, person, path) {
@@ -61,9 +89,8 @@ function renderPerson (data, house, person, path) {
 }
 
 function renderFamily (data, house, family, path) {
-  const index = path[path.length - 1]
-  const slug = slugify(path, { sep: '_' })
-  const color = COLORS[index % COLORS.length]
+  const slug = slugify(path)
+  const color = COLORS[getId('family') % COLORS.length]
   const parents = family.parents || []
   const parents2 = family.parents2 || []
   const children = family.children || []
