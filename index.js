@@ -1,9 +1,10 @@
-const redent = require('strip-indent')
 const map = require('object-loops/map')
+const join = require('./lib/join')
 const values = require('object-loops/values')
+const slugify = require('./lib/slugify')
 const normalize = require('./lib/normalize')
 const applyStyle = require('./lib/apply_style')
-const join = require('./lib/join')
+
 const COLORS = require('./lib/defaults/colors')
 
 function render (data) {
@@ -54,8 +55,9 @@ function renderPerson (data, house, person, path) {
 }
 
 function renderFamily (data, house, family, path) {
-  const id = path[path.length - 1] // uhh
-  const color = COLORS[id % COLORS.length]
+  const index = path[path.length - 1]
+  const slug = slugify(path, { sep: '_' })
+  const color = COLORS[index % COLORS.length]
   const parents = family.parents || []
   const parents2 = family.parents2 || []
   const children = family.children || []
@@ -64,6 +66,9 @@ function renderFamily (data, house, family, path) {
   const hasParents = (parents.length + parents2.length) > 0
   const hasChildren = (children.length + children.length) > 0
   const hasManyChildren = (children.length + children.length) > 1
+
+  const union = `union_${slug}`
+  const kids = `siblings_${slug}`
 
   return [
     hasParents && renderParents(),
@@ -76,30 +81,30 @@ function renderFamily (data, house, family, path) {
     return [
       '',
       `# Family ${JSON.stringify(path)}`,
-      `m${id} [color="${color}", ${applyStyle(data, [':union'])}];`,
+      `${union} [color="${color}", ${applyStyle(data, [':union'])}];`,
       `{rank=same; "${parents.join('", "')}"};`,
       parents.map(parent => {
-        return `"${parent}":e -> m${id} [color="${color}", ${applyStyle(data, [':parent-link'])}];`
+        return `"${parent}":e -> ${union} [color="${color}", ${applyStyle(data, [':parent-link'])}];`
       }),
       parents2.map(parent => {
-        return `"${parent}":e -> m${id} [color="${color}", ${applyStyle(data, [':parent-link', ':parent2-link'])}];`
+        return `"${parent}":e -> ${union} [color="${color}", ${applyStyle(data, [':parent-link', ':parent2-link'])}];`
       })
     ]
   }
 
   function renderLink () {
-    return `m${id} -> k${id} [color="${color}", weight=10, ${applyStyle(data, [':parent-link'])}];`
+    return `${union} -> ${kids} [color="${color}", weight=10, ${applyStyle(data, [':parent-link'])}];`
   }
 
   function renderKids () {
     return [
-      `k${id} [${applyStyle(data, [':children'])}];`,
+      `${kids} [${applyStyle(data, [':children'])}];`,
       `{rank=same; "${children.join('", "')}"};`,
       children.map(kid => {
-        return `k${id} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link'])}];`
+        return `${kids} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link'])}];`
       }),
       children2.map(kid => {
-        return `k${id} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link', ':child2-link'])}];`
+        return `${kids} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link', ':child2-link'])}];`
       })
     ]
   }
