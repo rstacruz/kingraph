@@ -113,10 +113,16 @@ function renderFamily (data, house, family, path) {
   const kids = `siblings_${slug}`
 
   return [
-    hasParents && renderParents(),
-    hasParents && hasChildren && renderLink(),
-    hasChildren && renderKids(),
-    (hasManyChildren > 1) && renderKidLinks()
+    '',
+    `subgraph cluster_family_${slug} {`,
+    { indent: [
+      style([':cluster']),
+      hasParents && renderParents(),
+      hasParents && hasChildren && renderLink(),
+      hasChildren && renderKids(),
+      (hasManyChildren > 1) && renderKidLinks()
+    ] },
+    '}'
   ]
 
   function style (classes, before) {
