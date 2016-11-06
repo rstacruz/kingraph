@@ -14,9 +14,15 @@ function render (data) {
   return join([
     'digraph G {',
     { indent: [
-      `edge [${applyStyle(data, [':edge'])}];`,
-      `node [${applyStyle(data, [':node'])}];`,
-      `${applyStyle(data, [':digraph'], { sep: '; ' })};`,
+      'edge [',
+      { indent: applyStyle(data, [':edge']) },
+      ']',
+      '',
+      'node [',
+      { indent: applyStyle(data, [':node']) },
+      ']',
+      '',
+      applyStyle(data, [':digraph']),
       '',
       renderHouse(data, data, [])
     ]},
@@ -51,7 +57,7 @@ function renderPerson (data, house, person, path) {
     label = JSON.stringify(id)
   }
 
-  return `"${id}" [label=${label}, ${applyStyle(data, person.class || [])}];`
+  return `"${id}" [label=${label}, ${applyStyle(data, person.class || [])}]`
 }
 
 function renderFamily (data, house, family, path) {
@@ -81,36 +87,80 @@ function renderFamily (data, house, family, path) {
     return [
       '',
       `# Family ${JSON.stringify(path)}`,
-      `${union} [color="${color}", ${applyStyle(data, [':union'])}];`,
-      `{rank=same; "${parents.join('", "')}"};`,
+      `${union} [`,
+      { indent: [
+        `color="${color}"`,
+        applyStyle(data, [':union']) ] },
+      ']',
+      '',
+      `{rank=same; "${parents.join('", "')}"}`,
+      '',
       parents.map(parent => {
-        return `"${parent}":e -> ${union} [color="${color}", ${applyStyle(data, [':parent-link'])}];`
+        return [
+          `"${parent}":e -> ${union} [`,
+          { indent: [
+            `color="${color}"`,
+            applyStyle(data, [':parent-link']) ] },
+          ']' ]
       }),
       parents2.map(parent => {
-        return `"${parent}":e -> ${union} [color="${color}", ${applyStyle(data, [':parent-link', ':parent2-link'])}];`
+        return [
+          `"${parent}":e -> ${union} [`,
+          { indent: [
+            `color="${color}"`,
+            applyStyle(data, [':parent-link', ':parent2-link']) ] },
+          ']' ]
       })
     ]
   }
 
   function renderLink () {
-    return `${union} -> ${kids} [color="${color}", weight=10, ${applyStyle(data, [':parent-link'])}];`
+    return [
+      `${union} -> ${kids} [`,
+      { indent: [
+        `color="${color}"`,
+        'weight=10',
+        applyStyle(data, [':parent-link']) ] },
+      ']' ]
   }
 
   function renderKids () {
     return [
-      `${kids} [${applyStyle(data, [':children'])}];`,
-      `{rank=same; "${children.join('", "')}"};`,
+      `${kids} [`,
+      { indent: applyStyle(data, [':children']) },
+      `]`,
+
+      `{rank=same; "${children.join('", "')}"}`,
+
       children.map(kid => {
-        return `${kids} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link'])}];`
+        return [
+          `${kids} -> "${kid}":w [`,
+          { indent: [
+            'weight=2',
+            `color="${color}"`,
+            applyStyle(data, [':child-link']) ] },
+          ']' ]
       }),
       children2.map(kid => {
-        return `${kids} -> "${kid}":w [weight=2, color="${color}", ${applyStyle(data, [':child-link', ':child2-link'])}];`
+        return [
+          `${kids} -> "${kid}":w [`,
+          { indent: [
+            'weight=2',
+            `color="${color}"`,
+            applyStyle(data, [':child-link', ':child2-link']) ] },
+          ']' ]
       })
     ]
   }
 
   function renderKidLinks () {
-    return `{"${children.concat(children2).join('" -> "')}" [style=invis, weight=5]};`
+    return [
+      `{"${children.concat(children2).join('" -> "')}" [`,
+      { indent: [
+        'style=invis',
+        'weight=5',
+      ] },
+      ']' ]
   }
 }
 
