@@ -28,7 +28,6 @@ function render (data) {
       ']',
       '',
       applyStyle(data, [':digraph']),
-      '',
       renderHouse(data, data, [])
     ]},
     '}'
@@ -45,8 +44,8 @@ function renderHouse (data, house, path) {
     renderHouses(data, houses, path),
 
     // People and families
-    values(map(people, (p, id) => renderPerson(data, house, p || {}, path.concat([id])))),
-    values(map(families, (f, id) => renderFamily(data, house, f || {}, path.concat([id]))))
+    values(map(families, (f, id) => renderFamily(data, house, f || {}, path.concat([id])))),
+    values(map(people, (p, id) => renderPerson(data, house, p || {}, path.concat([id]))))
   ]
 
   if (path.length === 0) {
@@ -105,6 +104,28 @@ function renderPerson (data, house, person, path) {
     ']' ]
 }
 
+/*
+ * For comments
+ */
+
+function summarizeFamily (family) {
+  const parents = []
+    .concat(family.parents || [])
+    .concat(family.parents2 || [])
+    .filter(Boolean)
+
+  const children = []
+    .concat(family.children || [])
+    .concat(family.children2 || [])
+    .filter(Boolean)
+
+  return `[${parents.join(', ')}] -> [${children.join(', ')}]`
+}
+
+/*
+ * Renders a family subgraph
+ */
+
 function renderFamily (data, house, family, path) {
   const slug = slugify(path)
   const color = COLORS[getId('family') % COLORS.length]
@@ -124,10 +145,14 @@ function renderFamily (data, house, family, path) {
   return [
     '',
     `subgraph cluster_family_${slug} {`,
+    style([':family']),
     { indent: [
-      style([':family']),
       housename && renderHousePrelude(),
       renderSubFamilies(),
+      '',
+      `# Family ${summarizeFamily(family)}`,
+      LINE2,
+      '',
       hasParents && renderParents(),
       hasParents && hasChildren && renderLink(),
       hasChildren && renderKids(),
@@ -154,17 +179,12 @@ function renderFamily (data, house, family, path) {
 
   function renderParents () {
     return [
-      '',
-      LINE2,
-      `# Family ${JSON.stringify(path)}`,
-      LINE2,
-      '',
       `${union} [`,
       style([':union'], { color }),
       ']',
       '',
-      `{rank=same; "${parents.join('", "')}"}`,
-      '',
+      // `{rank=same; "${parents.join('", "')}"}`,
+      // '',
       parents.map(parent => {
         return [
           `"${parent}":e -> ${union} [`,

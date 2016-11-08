@@ -35,48 +35,41 @@ To define their full names, add a `people` collection. This is optional—people
 +    fullname: Marjorie Bouvier Simpson
 ```
 
-### Grouping people
+### Second generations
 
-To group people together, use `houses`. Each house can have `families` and `people`.
+To create second generations, you can simply add another `Family` record.
 
 ```diff
--families:
--  - parents: [Marge, Homer]
--    children: [Bart, Lisa, Maggie]
-+houses:
-+  Simpson:
-+    families:
-+      - parents: [Marge, Homer]
-+        children: [Bart, Lisa, Maggie]
-+  Bouvier:
-+    families:
-+      - parents: [Jacqueline, Clancy]
-+        children: [Marge, Patty, Selma]
- people:
-   Marge:
-     fullname: Marjorie Bouvier Simpson
+ families:
+   - parents: [Marge, Homer]
+     children: [Bart, Lisa, Maggie]
++  - parents: [Lisa, Milhouse]
++    children: [Zia]
 ```
 
-### Disambiguating
-
-Now `Marge` belongs in 2 houses. To fix this, add a `people` collection under the house, and put `Marge` there.
+Preferably, you can make them a sub-family. This can help untangle things.
 
 ```diff
- houses:
-   Simpson:
-     families:
-       - parents: [Marge, Homer]
-         children: [Bart, Lisa, Maggie]
-+    people:
-+      Marge:
-+      fullname: Marjorie Bouvier Simpson
-   Bouvier:
-     families:
-       - parents: [Jacqueline, Clancy]
-         children: [Marge, Patty, Selma]
--people:
--  Marge:
--    fullname: Marjorie Bouvier Simpson
+ families:
+   - parents: [Marge, Homer]
+     children: [Bart, Lisa, Maggie]
++    families:
++      - parents: [Lisa, Milhouse]
++        children: [Zia]
+```
+
+### Houses
+
+Turn a family into a house by adding a `house` name. They will show up grouped in a box.
+
+```diff
+families:
+  - house: Stark
+    parents: [Ned, Catelyn]
+    children: [Arya, Rickon, Bran, Sansa, Rob]
+  - house: Lannister
+    parents: [Tywin, Joanna]
+    children: [Cersei, Jaime, Tyrion]
 ```
 
 More features
@@ -93,37 +86,6 @@ families:
   - parents: [Ned, Catelyn]
     children: [Arya, Rickon, Bran, Sansa, Rob]
     children2: [Jon]
-```
-
-### Nested families
-
-You can put `families` within families. There's no need to do this, but it can help untangle knots by containing mega-families in the same bounding box.
-
-```yml
-families:
-  - parents: [Abe, Alice]
-    children: [Bob, Brandon]
-    families:
-    - parents: [Bob, Cassie]
-      children: [Dany]
-    - parents: [Brandon, Carol]
-      children: [Ethan]
-```
-
-### Nested houses
-
-Houses can nest to make sub-houses. Sub-house boxes will be placed inside house boxes.
-
-```yml
-houses:
-  Simpson:
-    families:
-      - parents: [Homer, Marge]
-        children: [Bart, Lisa, Maggie]
-    houses:
-      Simpson-Van Houten:
-        - parents: [Lisa, Milhouse]
-          children: [Zia]
 ```
 
 ## Styling
