@@ -189,7 +189,7 @@ function renderFamily (data, house, family, path) {
   function renderParents () {
     return [
       `${union} [`,
-      style([':union'], { color }),
+      style([':union'], { fillcolor: color }),
       ']',
       '',
       parents.length > 0 && [
@@ -215,7 +215,7 @@ function renderFamily (data, house, family, path) {
   function renderKids () {
     return [
       `${kids} [`,
-      style([':children'], { color }),
+      style([':children'], { fillcolor: color }),
       `]`,
 
       children.length > 0 && [
