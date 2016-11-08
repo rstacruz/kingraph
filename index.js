@@ -215,7 +215,7 @@ function renderFamily (data, house, family, path) {
   function renderKids () {
     return [
       `${kids} [`,
-      style([':children']),
+      style([':children'], { color }),
       `]`,
 
       children.length > 0 && [
