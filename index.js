@@ -208,7 +208,7 @@ function renderFamily (data, house, family, path) {
   function renderLink () {
     return [
       `${union} -> ${kids} [`,
-      style([':parent-link'], { weight: 10, color: color }),
+      style([':parent-link', ':parent-child-link'], { color: color }),
       ']' ]
   }
 
@@ -238,8 +238,7 @@ function renderFamily (data, house, family, path) {
       `{"${children.concat(children2).join('" -> "')}" [`,
       { indent: [
         applyStyle(data, [':child-links'], { before: {
-          style: 'invis',
-          weight: 5
+          style: 'invis'
         }})
       ] },
       ']' ]
