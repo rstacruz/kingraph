@@ -1,35 +1,95 @@
 families:
-  - parents: [Ned, Catelyn]
-    children: [Robb, Sansa, Arya, Bran, Rickon]
-    children2: [Jon]
-  - parents: [Lyanna, Rhaegar]
-    children: [Jon]
-  - parents: [Hoster, Minisa]
-    children: [Catelyn, Lysa, Edmure, Robin Arryn, Brynden]
-  - parents: [Rickard, Lyarra]
+  - house: Targaryen
+    children: [Danaerys, Rhaegar, Viserys]
+
+  - house: Greyjoy
+    children: [Theon, Yara]
+
+  - house: Stark
+    parents: [Rickard, Lyarra]
     children: [Ned, Lyanna, Brandon, Benjen]
-  - parents: [Sansa, Tyrion]
-  - parents: [Tywin, Joanna]
+    families:
+      - parents: [Ned, Catelyn]
+        children: [Robb, Sansa, Arya, Bran, Rickon]
+        children2: [Jon, Theon]
+      - parents: [Lyanna, Rhaegar]
+        children: [Jon]
+
+  - house: Tyrell
+    children: [Margaery, Loras]
+
+  - house: Barratheon
+    children: [Robert, Stannis, Renly]
+    families:
+      - parents2: [Renly, Margaery]
+
+  - house: Lannister
+    parents: [Tywin, Joanna]
     children: [Cersei, Jaime, Tyrion]
-  - parents: [Cersei, Jaime]
-    parents2: [Robert]
-    children: [Joffrey, Myrcella, Tommen]
-  - children: [Danaerys, Rhaegar, Viserys]
+    families:
+      - parents: [Cersei, Jaime]
+        parents2: [Robert]
+        children: [Joffrey, Myrcella, Tommen]
+        families:
+          - parents2: [Margaery, Joffrey]
+          - parents2: [Margaery, Tommen]
+      - parents2: [Sansa, Tyrion]
+
+  - house: Tully
+    parents: [Hoster, Minisa]
+    children: [Catelyn, Lysa, Edmure, Robin Arryn, Brynden]
+
+  - parents2: [Danaerys, Drogo]
+  - parents2: [Lysa, Littlefinger]
+  - parents2: [Sansa, Joffrey]
+  - parents2: [Loras, Renly]
 
 people:
-  Hoster:
-    fullname: Hoster Tully
-  Minisa:
-    fullname: Minisa Whent
+  Jon:
+    fullname: Jon Snow
   Robert:
     fullname: Robert Baratheon
   Cersei:
     fullname: Cersei Lannister
   Jaime:
     fullname: Jaime "Kingslayer" Lannister
+  Tyrion:
+    fullname: Tyrion "The Imp" Lannister
   Rhaegar:
     fullname: Rhaegar Targaryen
+    class: [minor]
   Danaerys:
     fullname: Danaerys Targaryen
   Viserys:
     fullname: Viserys Targaryen
+  Hoster:
+    fullname: Hoster Tully
+    class: [minor]
+  Minisa:
+    fullname: Minisa Whent
+    class: [minor]
+  Brandon:
+    class: [minor]
+  Rickon:
+    class: [minor]
+  Joanna:
+    class: [minor]
+  Lyanna:
+    class: [minor]
+  Rickard:
+    class: [minor]
+  Lyarra:
+    class: [minor]
+  Littlefinger:
+    fullname: Petyr "Littlefinger" Baelish
+  Ned:
+    fullname: Eddard Stark
+
+styles:
+  minor:
+    style: "filled"
+    fillcolor: "#f4f4f4"
+  :parent2-link:
+    style: 'dashed'
+  :child2-link:
+    style: 'dashed'
