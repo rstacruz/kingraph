@@ -37,7 +37,7 @@ function render (data) {
 
 function renderHouse (data, house, path) {
   const people = house.people || {}
-  const families = house.families || {}
+  const families = house.families || []
   const houses = house.houses || {}
 
   const meat = [
@@ -104,6 +104,7 @@ function renderFamily (data, house, family, path) {
   const parents2 = family.parents2 || []
   const children = family.children || []
   const children2 = family.children2 || []
+  const housename = family.house
 
   const hasParents = (parents.length + parents2.length) > 0
   const hasChildren = (children.length + children.length) > 0
@@ -116,7 +117,9 @@ function renderFamily (data, house, family, path) {
     '',
     `subgraph cluster_family_${slug} {`,
     { indent: [
-      style([':cluster']),
+      style([':family']),
+      housename && renderHousePrelude(),
+      renderSubFamilies(),
       hasParents && renderParents(),
       hasParents && hasChildren && renderLink(),
       hasChildren && renderKids(),
@@ -127,6 +130,18 @@ function renderFamily (data, house, family, path) {
 
   function style (classes, before) {
     return { indent: applyStyle(data, classes, { before: (before || {}) }) }
+  }
+
+  function renderHousePrelude () {
+    return [
+      `label=<<b>${housename}</b>>`,
+      applyStyle(data, [':house'])
+    ]
+  }
+
+  function renderSubFamilies () {
+    const families = family.families || []
+    return families.map((f, idx) => renderFamily(data, house, f, path.concat(idx)))
   }
 
   function renderParents () {
@@ -170,7 +185,8 @@ function renderFamily (data, house, family, path) {
       style([':children']),
       `]`,
 
-      `{rank=same; ${children.map(c => JSON.stringify(c)).join(', ')}}`,
+      // Sibling hints: probably not necessary
+      // `{rank=same; ${children.map(c => JSON.stringify(c)).join(', ')}}`,
 
       children.map(kid => {
         return [
