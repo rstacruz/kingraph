@@ -91,7 +91,7 @@ function renderPerson (data, house, person, path) {
       '<font point-size="10" color="#aaaaaa">' +
       `${person.fullname || person.name}</font></td></tr></table>>`
   } else {
-    label = JSON.stringify(id)
+    label = escape(id)
   }
 
   return [
@@ -148,6 +148,7 @@ function renderFamily (data, house, family, path) {
     style([':family']),
     { indent: [
       housename && renderHousePrelude(),
+      // renderPeople(),
       renderSubFamilies(),
       '',
       `# Family ${summarizeFamily(family)}`,
@@ -163,6 +164,14 @@ function renderFamily (data, house, family, path) {
 
   function style (classes, before) {
     return { indent: applyStyle(data, classes, { before: (before || {}) }) }
+  }
+
+  function renderPeople () {
+    const list = []
+      .concat(parents)
+      .concat(children)
+
+    return `{${list.join('; ')}}`
   }
 
   function renderHousePrelude () {
@@ -183,20 +192,16 @@ function renderFamily (data, house, family, path) {
       style([':union'], { color }),
       ']',
       '',
-      // `{rank=same; "${parents.join('", "')}"}`,
-      // '',
-      parents.map(parent => {
-        return [
-          `"${parent}":e -> ${union} [`,
-          style([':parent-link'], { color }),
-          ']' ]
-      }),
-      parents2.map(parent => {
-        return [
-          `"${parent}":e -> ${union} [`,
-          style([':parent-link', ':parent2-link'], { color }),
-          ']' ]
-      })
+      parents.length > 0 && [
+        `{${parents.map(escape).join(', ')}} -> ${union} [`,
+        style([':parent-link'], { color }),
+        ']'
+      ],
+      parents2.length > 0 && [
+        `{${parents2.map(escape).join(', ')}} -> ${union} [`,
+        style([':parent-link', ':parent2-link'], { color }),
+        ']'
+      ]
     ]
   }
 
@@ -213,27 +218,18 @@ function renderFamily (data, house, family, path) {
       style([':children']),
       `]`,
 
-      // Sibling hints: probably not necessary
-      // `{rank=same; ${children.map(c => JSON.stringify(c)).join(', ')}}`,
+      children.length > 0 && [
+        `${kids} -> {${children.map(escape).join(', ')}} [`,
+        style([':child-link'], { color }),
+        ']'
+      ],
 
-      children.map(kid => {
-        return [
-          `${kids} -> ${JSON.stringify(kid)}:w [`,
-          style([':child-link'], {
-            weight: 2,
-            color: color
-          }),
-          ']' ]
-      }),
-      children2.map(kid => {
-        return [
-          `${kids} -> ${JSON.stringify(kid)}:w [`,
-          style([':child-link', ':child2-link'], {
-            weight: 2,
-            color: color
-          }),
-          ']' ]
-      })
+      children2.length > 0 && [
+        `${kids} -> {${children2.map(escape).join(', ')}} [`,
+        style([':child-link', ':child2-link'], { color }),
+        ']'
+      ]
+
     ]
   }
 
@@ -247,6 +243,18 @@ function renderFamily (data, house, family, path) {
         }})
       ] },
       ']' ]
+  }
+}
+
+/*
+ * Escapes a name into a node name.
+ */
+
+function escape (str) {
+  if (/^[A-Za-z]+$/.test(str)){
+    return str
+  } else {
+    return JSON.stringify(str)
   }
 }
 
