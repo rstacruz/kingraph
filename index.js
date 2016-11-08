@@ -81,6 +81,7 @@ function renderHouses (data, houses, path) {
 function renderPerson (data, house, person, path) {
   let id = path[path.length - 1]
   let label
+  let href = person.links && person.links[0]
 
   if (person.name || person.fullname) {
     label =
@@ -94,7 +95,14 @@ function renderPerson (data, house, person, path) {
     label = JSON.stringify(id)
   }
 
-  return `"${id}" [label=${label}, ${applyStyle(data, person.class || [])}]`
+  return [
+    `"${id}" [`,
+      { indent: [
+        applyStyle(data, person.class || [], { before: {
+          label, href
+        } })
+      ] },
+    ']' ]
 }
 
 function renderFamily (data, house, family, path) {
