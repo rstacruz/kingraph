@@ -133,6 +133,7 @@ function renderFamily (data, house, family, path) {
   const parents2 = family.parents2 || []
   const children = family.children || []
   const children2 = family.children2 || []
+  const affinity = family.affinity || []
   const housename = family.house
 
   const hasParents = (parents.length + parents2.length) > 0

@@ -3,7 +3,8 @@ families:
     children: [Danaerys, Rhaegar, Viserys]
 
   - house: Greyjoy
-    children: [Theon, Yara]
+    parents: [Balon, Alannys]
+    children: [Theon, Yara, Rodrik, Maron]
 
   - house: Stark
     parents: [Rickard, Lyarra]
@@ -12,6 +13,8 @@ families:
       - parents: [Ned, Catelyn]
         children: [Robb, Sansa, Arya, Bran, Rickon]
         children2: [Jon, Theon]
+        families:
+          - parents: [Robb, Talisa]
       - parents: [Lyanna, Rhaegar]
         children: [Jon]
 
@@ -22,6 +25,10 @@ families:
     children: [Robert, Stannis, Renly]
     families:
       - parents2: [Renly, Margaery]
+      - parents: [Stannis, Selyse]
+        children: [Shireen]
+      - parents2: [Robert]
+        children: [Gendry]
 
   - house: Lannister
     parents: [Tywin, Joanna]
@@ -30,19 +37,22 @@ families:
       - parents: [Cersei, Jaime]
         parents2: [Robert]
         children: [Joffrey, Myrcella, Tommen]
-        families:
-          - parents2: [Margaery, Joffrey]
-          - parents2: [Margaery, Tommen]
       - parents2: [Sansa, Tyrion]
+      - parents2: [Tyrion, Shae]
 
   - house: Tully
     parents: [Hoster, Minisa]
     children: [Catelyn, Lysa, Edmure, Robin Arryn, Brynden]
 
+  # Affinities
+  - parents2: [Margaery, Joffrey]
+  - parents2: [Margaery, Tommen]
   - parents2: [Danaerys, Drogo]
   - parents2: [Lysa, Littlefinger]
   - parents2: [Sansa, Joffrey]
   - parents2: [Loras, Renly]
+  - parents2: [Danaerys, Daario]
+  - parents2: [Stannis, Melisandre]
 
 people:
   Jon:
@@ -82,14 +92,39 @@ people:
     class: [minor]
   Littlefinger:
     fullname: Petyr "Littlefinger" Baelish
+    class: [unaffiliated]
   Ned:
     fullname: Eddard Stark
+  Selyse:
+    fullname: Selyse Florent
+    class: [minor]
+  Daario:
+    fullname: Daario Naharis
+    class: [unaffiliated]
+  Drogo:
+    fullname: Khal Drogo
+    class: [unaffiliated]
+  Balon:
+    class: [minor]
+  Alannys:
+    class: [minor]
+  Rodrik:
+    class: [minor]
+  Maron:
+    class: [minor]
+  Edmure:
+    class: [minor]
+  Brynden:
+    class: [minor]
+  Melisandre:
+    class: [unaffiliated]
 
 styles:
   minor:
     style: "filled"
     fillcolor: "#f4f4f4"
-  :parent2-link:
-    style: 'dashed'
-  :child2-link:
-    style: 'dashed'
+    penwidth: 0
+  unaffiliated:
+    style: "filled"
+    fillcolor: "#f4f4e0"
+    penwidth: 0
