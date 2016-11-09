@@ -4,6 +4,8 @@
 
 A family tree plotter with a very simple syntax. It probably doesn't cover everything you need, but covers 90% of it for the sake of simplicity.
 
+![](docs/images/example.png)
+
 Usage
 -----
 
