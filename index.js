@@ -40,9 +40,6 @@ function renderHouse (data, house, path) {
   const houses = house.houses || {}
 
   const meat = [
-    // Sub-houses
-    renderHouses(data, houses, path),
-
     // People and families
     values(map(families, (f, id) => renderFamily(data, house, f || {}, path.concat([id])))),
     values(map(people, (p, id) => renderPerson(data, house, p || {}, path.concat([id]))))
@@ -69,12 +66,6 @@ function renderHouse (data, house, path) {
       '}'
     ]
   }
-}
-
-function renderHouses (data, houses, path) {
-  return values(map(houses, (house, id) => {
-    return renderHouse(data, house, path.concat([id]))
-  }))
 }
 
 function renderPerson (data, house, person, path) {
