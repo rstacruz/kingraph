@@ -176,9 +176,11 @@ function renderFamily (data, house, family, path) {
   }
 
   function renderHousePrelude () {
+    let label = `<<b>${housename}</b>>`
+    let labelhref = family.links && family.links[0]
+
     return [
-      `label=<<b>${housename}</b>>`,
-      applyStyle(data, [':house'])
+      applyStyle(data, [':house'], { before: { label, labelhref } })
     ]
   }
 
