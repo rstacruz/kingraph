@@ -78,8 +78,8 @@
 <!-- Danaerys -->
 <g id="node2" class="node"><title>Danaerys</title>
 <polygon fill="white" stroke="#cccccc" points="479,-1783 299,-1783 299,-1741 479,-1741 479,-1783"/>
-<text text-anchor="start" x="363.072" y="-1764.4" font-family="sans-serif" font-size="14.00">Danaerys</text>
-<text text-anchor="start" x="348.831" y="-1750" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Danaerys Targaryen</text>
+<text text-anchor="start" x="359.551" y="-1764.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Danaerys</text>
+<text text-anchor="start" x="343.938" y="-1750" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Danaerys Targaryen</text>
 </g>
 <!-- siblings_0&#45;&gt;Danaerys -->
 <g id="edge1" class="edge"><title>siblings_0&#45;&gt;Danaerys</title>
@@ -90,8 +90,8 @@
 <!-- Rhaegar -->
 <g id="node3" class="node"><title>Rhaegar</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-1723 299,-1723 299,-1681 479,-1681 479,-1723"/>
-<text text-anchor="start" x="365.68" y="-1704.4" font-family="sans-serif" font-size="14.00">Rhaegar</text>
-<text text-anchor="start" x="350.55" y="-1690" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Rhaegar Targaryen</text>
+<text text-anchor="start" x="362.16" y="-1704.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Rhaegar</text>
+<text text-anchor="start" x="345.658" y="-1690" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Rhaegar Targaryen</text>
 </g>
 <!-- siblings_0&#45;&gt;Rhaegar -->
 <g id="edge2" class="edge"><title>siblings_0&#45;&gt;Rhaegar</title>
@@ -102,8 +102,8 @@
 <!-- Viserys -->
 <g id="node4" class="node"><title>Viserys</title>
 <polygon fill="white" stroke="#cccccc" points="479,-1663 299,-1663 299,-1621 479,-1621 479,-1663"/>
-<text text-anchor="start" x="367.619" y="-1644.4" font-family="sans-serif" font-size="14.00">Viserys</text>
-<text text-anchor="start" x="351.936" y="-1630" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Viserys Targaryen</text>
+<text text-anchor="start" x="366.557" y="-1644.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Viserys</text>
+<text text-anchor="start" x="348.942" y="-1630" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Viserys Targaryen</text>
 </g>
 <!-- siblings_0&#45;&gt;Viserys -->
 <g id="edge3" class="edge"><title>siblings_0&#45;&gt;Viserys</title>
@@ -150,7 +150,7 @@
 <!-- Balon -->
 <g id="node6" class="node"><title>Balon</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-943 299,-943 299,-907 479,-907 479,-943"/>
-<text text-anchor="middle" x="389" y="-920.8" font-family="sans-serif" font-size="14.00">Balon</text>
+<text text-anchor="middle" x="389" y="-920.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Balon</text>
 </g>
 <!-- Balon&#45;&gt;union_1 -->
 <g id="edge4" class="edge"><title>Balon&#45;&gt;union_1</title>
@@ -159,7 +159,7 @@
 <!-- Alannys -->
 <g id="node7" class="node"><title>Alannys</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-889 299,-889 299,-853 479,-853 479,-889"/>
-<text text-anchor="middle" x="389" y="-866.8" font-family="sans-serif" font-size="14.00">Alannys</text>
+<text text-anchor="middle" x="389" y="-866.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Alannys</text>
 </g>
 <!-- Alannys&#45;&gt;union_1 -->
 <g id="edge5" class="edge"><title>Alannys&#45;&gt;union_1</title>
@@ -168,7 +168,7 @@
 <!-- Theon -->
 <g id="node9" class="node"><title>Theon</title>
 <polygon fill="white" stroke="#cccccc" points="760,-997 580,-997 580,-961 760,-961 760,-997"/>
-<text text-anchor="middle" x="670" y="-974.8" font-family="sans-serif" font-size="14.00">Theon</text>
+<text text-anchor="middle" x="670" y="-974.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Theon</text>
 </g>
 <!-- siblings_1&#45;&gt;Theon -->
 <g id="edge7" class="edge"><title>siblings_1&#45;&gt;Theon</title>
@@ -179,7 +179,7 @@
 <!-- Yara -->
 <g id="node10" class="node"><title>Yara</title>
 <polygon fill="white" stroke="#cccccc" points="760,-835 580,-835 580,-799 760,-799 760,-835"/>
-<text text-anchor="middle" x="670" y="-812.8" font-family="sans-serif" font-size="14.00">Yara</text>
+<text text-anchor="middle" x="670" y="-812.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Yara</text>
 </g>
 <!-- siblings_1&#45;&gt;Yara -->
 <g id="edge8" class="edge"><title>siblings_1&#45;&gt;Yara</title>
@@ -190,7 +190,7 @@
 <!-- Rodrik -->
 <g id="node11" class="node"><title>Rodrik</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="760,-889 580,-889 580,-853 760,-853 760,-889"/>
-<text text-anchor="middle" x="670" y="-866.8" font-family="sans-serif" font-size="14.00">Rodrik</text>
+<text text-anchor="middle" x="670" y="-866.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Rodrik</text>
 </g>
 <!-- siblings_1&#45;&gt;Rodrik -->
 <g id="edge9" class="edge"><title>siblings_1&#45;&gt;Rodrik</title>
@@ -201,7 +201,7 @@
 <!-- Maron -->
 <g id="node12" class="node"><title>Maron</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="760,-943 580,-943 580,-907 760,-907 760,-943"/>
-<text text-anchor="middle" x="670" y="-920.8" font-family="sans-serif" font-size="14.00">Maron</text>
+<text text-anchor="middle" x="670" y="-920.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Maron</text>
 </g>
 <!-- siblings_1&#45;&gt;Maron -->
 <g id="edge10" class="edge"><title>siblings_1&#45;&gt;Maron</title>
@@ -220,7 +220,7 @@
 <!-- Lyanna -->
 <g id="node14" class="node"><title>Lyanna</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-1404 299,-1404 299,-1368 479,-1368 479,-1404"/>
-<text text-anchor="middle" x="389" y="-1381.8" font-family="sans-serif" font-size="14.00">Lyanna</text>
+<text text-anchor="middle" x="389" y="-1381.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Lyanna</text>
 </g>
 <!-- Lyanna&#45;&gt;union_2_0 -->
 <g id="edge12" class="edge"><title>Lyanna&#45;&gt;union_2_0</title>
@@ -229,8 +229,8 @@
 <!-- Jon -->
 <g id="node16" class="node"><title>Jon</title>
 <polygon fill="white" stroke="#cccccc" points="760,-1418 580,-1418 580,-1376 760,-1376 760,-1418"/>
-<text text-anchor="start" x="660.778" y="-1399.4" font-family="sans-serif" font-size="14.00">Jon</text>
-<text text-anchor="start" x="650.917" y="-1385" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Jon Snow</text>
+<text text-anchor="start" x="659.217" y="-1399.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Jon</text>
+<text text-anchor="start" x="648.548" y="-1385" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Jon Snow</text>
 </g>
 <!-- siblings_2_0&#45;&gt;Jon -->
 <g id="edge14" class="edge"><title>siblings_2_0&#45;&gt;Jon</title>
@@ -245,7 +245,7 @@
 <!-- Robb -->
 <g id="node18" class="node"><title>Robb</title>
 <polygon fill="white" stroke="#cccccc" points="760,-1196 580,-1196 580,-1160 760,-1160 760,-1196"/>
-<text text-anchor="middle" x="670" y="-1173.8" font-family="sans-serif" font-size="14.00">Robb</text>
+<text text-anchor="middle" x="670" y="-1173.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Robb</text>
 </g>
 <!-- Robb&#45;&gt;union_2_1_0 -->
 <g id="edge15" class="edge"><title>Robb&#45;&gt;union_2_1_0</title>
@@ -254,7 +254,7 @@
 <!-- Talisa -->
 <g id="node19" class="node"><title>Talisa</title>
 <polygon fill="white" stroke="#cccccc" points="760,-1142 580,-1142 580,-1106 760,-1106 760,-1142"/>
-<text text-anchor="middle" x="670" y="-1119.8" font-family="sans-serif" font-size="14.00">Talisa</text>
+<text text-anchor="middle" x="670" y="-1119.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Talisa</text>
 </g>
 <!-- Talisa&#45;&gt;union_2_1_0 -->
 <g id="edge16" class="edge"><title>Talisa&#45;&gt;union_2_1_0</title>
@@ -275,8 +275,8 @@
 <!-- Ned -->
 <g id="node21" class="node"><title>Ned</title>
 <polygon fill="white" stroke="#cccccc" points="479,-1301 299,-1301 299,-1259 479,-1259 479,-1301"/>
-<text text-anchor="start" x="377.339" y="-1282.4" font-family="sans-serif" font-size="14.00">Ned</text>
-<text text-anchor="start" x="362.759" y="-1268" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Eddard Stark</text>
+<text text-anchor="start" x="376.164" y="-1282.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Ned</text>
+<text text-anchor="start" x="359.826" y="-1268" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Eddard Stark</text>
 </g>
 <!-- Ned&#45;&gt;union_2_1 -->
 <g id="edge17" class="edge"><title>Ned&#45;&gt;union_2_1</title>
@@ -285,7 +285,7 @@
 <!-- Catelyn -->
 <g id="node22" class="node"><title>Catelyn</title>
 <polygon fill="white" stroke="#cccccc" points="479,-1140 299,-1140 299,-1104 479,-1104 479,-1140"/>
-<text text-anchor="middle" x="389" y="-1117.8" font-family="sans-serif" font-size="14.00">Catelyn</text>
+<text text-anchor="middle" x="389" y="-1117.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Catelyn</text>
 </g>
 <!-- Catelyn&#45;&gt;union_2_1 -->
 <g id="edge18" class="edge"><title>Catelyn&#45;&gt;union_2_1</title>
@@ -312,7 +312,7 @@
 <!-- Sansa -->
 <g id="node24" class="node"><title>Sansa</title>
 <polygon fill="white" stroke="#cccccc" points="760,-1088 580,-1088 580,-1052 760,-1052 760,-1088"/>
-<text text-anchor="middle" x="670" y="-1065.8" font-family="sans-serif" font-size="14.00">Sansa</text>
+<text text-anchor="middle" x="670" y="-1065.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Sansa</text>
 </g>
 <!-- siblings_2_1&#45;&gt;Sansa -->
 <g id="edge21" class="edge"><title>siblings_2_1&#45;&gt;Sansa</title>
@@ -323,7 +323,7 @@
 <!-- Arya -->
 <g id="node25" class="node"><title>Arya</title>
 <polygon fill="white" stroke="#cccccc" points="760,-1304 580,-1304 580,-1268 760,-1268 760,-1304"/>
-<text text-anchor="middle" x="670" y="-1281.8" font-family="sans-serif" font-size="14.00">Arya</text>
+<text text-anchor="middle" x="670" y="-1281.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Arya</text>
 </g>
 <!-- siblings_2_1&#45;&gt;Arya -->
 <g id="edge22" class="edge"><title>siblings_2_1&#45;&gt;Arya</title>
@@ -334,7 +334,7 @@
 <!-- Bran -->
 <g id="node26" class="node"><title>Bran</title>
 <polygon fill="white" stroke="#cccccc" points="760,-1358 580,-1358 580,-1322 760,-1322 760,-1358"/>
-<text text-anchor="middle" x="670" y="-1335.8" font-family="sans-serif" font-size="14.00">Bran</text>
+<text text-anchor="middle" x="670" y="-1335.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Bran</text>
 </g>
 <!-- siblings_2_1&#45;&gt;Bran -->
 <g id="edge23" class="edge"><title>siblings_2_1&#45;&gt;Bran</title>
@@ -345,7 +345,7 @@
 <!-- Rickon -->
 <g id="node27" class="node"><title>Rickon</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="760,-1250 580,-1250 580,-1214 760,-1214 760,-1250"/>
-<text text-anchor="middle" x="670" y="-1227.8" font-family="sans-serif" font-size="14.00">Rickon</text>
+<text text-anchor="middle" x="670" y="-1227.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Rickon</text>
 </g>
 <!-- siblings_2_1&#45;&gt;Rickon -->
 <g id="edge24" class="edge"><title>siblings_2_1&#45;&gt;Rickon</title>
@@ -384,7 +384,7 @@
 <!-- Rickard -->
 <g id="node29" class="node"><title>Rickard</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="198,-1458 18,-1458 18,-1422 198,-1422 198,-1458"/>
-<text text-anchor="middle" x="108" y="-1435.8" font-family="sans-serif" font-size="14.00">Rickard</text>
+<text text-anchor="middle" x="108" y="-1435.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Rickard</text>
 </g>
 <!-- Rickard&#45;&gt;union_2 -->
 <g id="edge27" class="edge"><title>Rickard&#45;&gt;union_2</title>
@@ -393,7 +393,7 @@
 <!-- Lyarra -->
 <g id="node30" class="node"><title>Lyarra</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="198,-1404 18,-1404 18,-1368 198,-1368 198,-1404"/>
-<text text-anchor="middle" x="108" y="-1381.8" font-family="sans-serif" font-size="14.00">Lyarra</text>
+<text text-anchor="middle" x="108" y="-1381.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Lyarra</text>
 </g>
 <!-- Lyarra&#45;&gt;union_2 -->
 <g id="edge28" class="edge"><title>Lyarra&#45;&gt;union_2</title>
@@ -414,7 +414,7 @@
 <!-- Brandon -->
 <g id="node32" class="node"><title>Brandon</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-1458 299,-1458 299,-1422 479,-1422 479,-1458"/>
-<text text-anchor="middle" x="389" y="-1435.8" font-family="sans-serif" font-size="14.00">Brandon</text>
+<text text-anchor="middle" x="389" y="-1435.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Brandon</text>
 </g>
 <!-- siblings_2&#45;&gt;Brandon -->
 <g id="edge32" class="edge"><title>siblings_2&#45;&gt;Brandon</title>
@@ -425,7 +425,7 @@
 <!-- Benjen -->
 <g id="node33" class="node"><title>Benjen</title>
 <polygon fill="white" stroke="#cccccc" points="479,-1512 299,-1512 299,-1476 479,-1476 479,-1512"/>
-<text text-anchor="middle" x="389" y="-1489.8" font-family="sans-serif" font-size="14.00">Benjen</text>
+<text text-anchor="middle" x="389" y="-1489.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Benjen</text>
 </g>
 <!-- siblings_2&#45;&gt;Benjen -->
 <g id="edge33" class="edge"><title>siblings_2&#45;&gt;Benjen</title>
@@ -440,7 +440,7 @@
 <!-- Margaery -->
 <g id="node35" class="node"><title>Margaery</title>
 <polygon fill="white" stroke="#cccccc" points="760,-54 580,-54 580,-18 760,-18 760,-54"/>
-<text text-anchor="middle" x="670" y="-31.8" font-family="sans-serif" font-size="14.00">Margaery</text>
+<text text-anchor="middle" x="670" y="-31.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Margaery</text>
 </g>
 <!-- siblings_3&#45;&gt;Margaery -->
 <g id="edge34" class="edge"><title>siblings_3&#45;&gt;Margaery</title>
@@ -451,7 +451,7 @@
 <!-- Loras -->
 <g id="node36" class="node"><title>Loras</title>
 <polygon fill="white" stroke="#cccccc" points="760,-108 580,-108 580,-72 760,-72 760,-108"/>
-<text text-anchor="middle" x="670" y="-85.8" font-family="sans-serif" font-size="14.00">Loras</text>
+<text text-anchor="middle" x="670" y="-85.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Loras</text>
 </g>
 <!-- siblings_3&#45;&gt;Loras -->
 <g id="edge35" class="edge"><title>siblings_3&#45;&gt;Loras</title>
@@ -506,8 +506,8 @@
 <!-- Robert -->
 <g id="node38" class="node"><title>Robert</title>
 <polygon fill="white" stroke="#cccccc" points="760,-259 580,-259 580,-217 760,-217 760,-259"/>
-<text text-anchor="start" x="650.949" y="-240.4" font-family="sans-serif" font-size="14.00">Robert</text>
-<text text-anchor="start" x="634.595" y="-226" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Robert Baratheon</text>
+<text text-anchor="start" x="648.997" y="-240.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Robert</text>
+<text text-anchor="start" x="630.543" y="-226" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Robert Baratheon</text>
 </g>
 <!-- Robert&#45;&gt;union_4_0 -->
 <g id="edge36" class="edge"><title>Robert&#45;&gt;union_4_0</title>
@@ -524,7 +524,7 @@
 <!-- Gendry -->
 <g id="node40" class="node"><title>Gendry</title>
 <polygon fill="white" stroke="#cccccc" points="1041,-256 861,-256 861,-220 1041,-220 1041,-256"/>
-<text text-anchor="middle" x="951" y="-233.8" font-family="sans-serif" font-size="14.00">Gendry</text>
+<text text-anchor="middle" x="951" y="-233.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Gendry</text>
 </g>
 <!-- siblings_4_0&#45;&gt;Gendry -->
 <g id="edge38" class="edge"><title>siblings_4_0&#45;&gt;Gendry</title>
@@ -547,7 +547,7 @@
 <!-- Stannis -->
 <g id="node42" class="node"><title>Stannis</title>
 <polygon fill="white" stroke="#cccccc" points="760,-373 580,-373 580,-337 760,-337 760,-373"/>
-<text text-anchor="middle" x="670" y="-350.8" font-family="sans-serif" font-size="14.00">Stannis</text>
+<text text-anchor="middle" x="670" y="-350.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Stannis</text>
 </g>
 <!-- Stannis&#45;&gt;union_4_1 -->
 <g id="edge39" class="edge"><title>Stannis&#45;&gt;union_4_1</title>
@@ -564,8 +564,8 @@
 <!-- Selyse -->
 <g id="node43" class="node"><title>Selyse</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="760,-319 580,-319 580,-277 760,-277 760,-319"/>
-<text text-anchor="start" x="652.226" y="-300.4" font-family="sans-serif" font-size="14.00">Selyse</text>
-<text text-anchor="start" x="641.755" y="-286" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Selyse Florent</text>
+<text text-anchor="start" x="649.496" y="-300.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Selyse</text>
+<text text-anchor="start" x="638.551" y="-286" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Selyse Florent</text>
 </g>
 <!-- Selyse&#45;&gt;union_4_1 -->
 <g id="edge40" class="edge"><title>Selyse&#45;&gt;union_4_1</title>
@@ -574,7 +574,7 @@
 <!-- Shireen -->
 <g id="node45" class="node"><title>Shireen</title>
 <polygon fill="white" stroke="#cccccc" points="1041,-344 861,-344 861,-308 1041,-308 1041,-344"/>
-<text text-anchor="middle" x="951" y="-321.8" font-family="sans-serif" font-size="14.00">Shireen</text>
+<text text-anchor="middle" x="951" y="-321.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Shireen</text>
 </g>
 <!-- siblings_4_1&#45;&gt;Shireen -->
 <g id="edge42" class="edge"><title>siblings_4_1&#45;&gt;Shireen</title>
@@ -585,7 +585,7 @@
 <!-- Renly -->
 <g id="node47" class="node"><title>Renly</title>
 <polygon fill="white" stroke="#cccccc" points="760,-199 580,-199 580,-163 760,-163 760,-199"/>
-<text text-anchor="middle" x="670" y="-176.8" font-family="sans-serif" font-size="14.00">Renly</text>
+<text text-anchor="middle" x="670" y="-176.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Renly</text>
 </g>
 <!-- Renly&#45;&gt;union_4_2 -->
 <g id="edge44" class="edge"><title>Renly&#45;&gt;union_4_2</title>
@@ -624,8 +624,8 @@
 <!-- Tyrion -->
 <g id="node50" class="node"><title>Tyrion</title>
 <polygon fill="white" stroke="#cccccc" points="760,-726 580,-726 580,-684 760,-684 760,-726"/>
-<text text-anchor="start" x="650.948" y="-707.4" font-family="sans-serif" font-size="14.00">Tyrion</text>
-<text text-anchor="start" x="613.853" y="-693" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Tyrion &quot;The Imp&quot; Lannister</text>
+<text text-anchor="start" x="650.558" y="-707.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Tyrion</text>
+<text text-anchor="start" x="610.887" y="-693" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Tyrion &quot;The Imp&quot; Lannister</text>
 </g>
 <!-- Tyrion&#45;&gt;union_5_0 -->
 <g id="edge48" class="edge"><title>Tyrion&#45;&gt;union_5_0</title>
@@ -638,7 +638,7 @@
 <!-- Shae -->
 <g id="node51" class="node"><title>Shae</title>
 <polygon fill="white" stroke="#cccccc" points="760,-666 580,-666 580,-630 760,-630 760,-666"/>
-<text text-anchor="middle" x="670" y="-643.8" font-family="sans-serif" font-size="14.00">Shae</text>
+<text text-anchor="middle" x="670" y="-643.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Shae</text>
 </g>
 <!-- Shae&#45;&gt;union_5_0 -->
 <g id="edge49" class="edge"><title>Shae&#45;&gt;union_5_0</title>
@@ -655,8 +655,8 @@
 <!-- Cersei -->
 <g id="node54" class="node"><title>Cersei</title>
 <polygon fill="white" stroke="#cccccc" points="760,-612 580,-612 580,-570 760,-570 760,-612"/>
-<text text-anchor="start" x="652.619" y="-593.4" font-family="sans-serif" font-size="14.00">Cersei</text>
-<text text-anchor="start" x="637.596" y="-579" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Cersei Lannister</text>
+<text text-anchor="start" x="649.78" y="-593.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Cersei</text>
+<text text-anchor="start" x="633.607" y="-579" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Cersei Lannister</text>
 </g>
 <!-- Cersei&#45;&gt;union_5_2 -->
 <g id="edge52" class="edge"><title>Cersei&#45;&gt;union_5_2</title>
@@ -665,8 +665,8 @@
 <!-- Jaime -->
 <g id="node55" class="node"><title>Jaime</title>
 <polygon fill="white" stroke="#cccccc" points="760,-552 580,-552 580,-510 760,-510 760,-552"/>
-<text text-anchor="start" x="653.673" y="-533.4" font-family="sans-serif" font-size="14.00">Jaime</text>
-<text text-anchor="start" x="610.941" y="-519" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Jaime &quot;Kingslayer&quot; Lannister</text>
+<text text-anchor="start" x="651.834" y="-533.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Jaime</text>
+<text text-anchor="start" x="606.942" y="-519" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Jaime &quot;Kingslayer&quot; Lannister</text>
 </g>
 <!-- Jaime&#45;&gt;union_5_2 -->
 <g id="edge53" class="edge"><title>Jaime&#45;&gt;union_5_2</title>
@@ -675,7 +675,7 @@
 <!-- Joffrey -->
 <g id="node57" class="node"><title>Joffrey</title>
 <polygon fill="white" stroke="#cccccc" points="1041,-620 861,-620 861,-584 1041,-584 1041,-620"/>
-<text text-anchor="middle" x="951" y="-597.8" font-family="sans-serif" font-size="14.00">Joffrey</text>
+<text text-anchor="middle" x="951" y="-597.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Joffrey</text>
 </g>
 <!-- siblings_5_2&#45;&gt;Joffrey -->
 <g id="edge56" class="edge"><title>siblings_5_2&#45;&gt;Joffrey</title>
@@ -686,7 +686,7 @@
 <!-- Myrcella -->
 <g id="node58" class="node"><title>Myrcella</title>
 <polygon fill="white" stroke="#cccccc" points="1041,-512 861,-512 861,-476 1041,-476 1041,-512"/>
-<text text-anchor="middle" x="951" y="-489.8" font-family="sans-serif" font-size="14.00">Myrcella</text>
+<text text-anchor="middle" x="951" y="-489.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Myrcella</text>
 </g>
 <!-- siblings_5_2&#45;&gt;Myrcella -->
 <g id="edge57" class="edge"><title>siblings_5_2&#45;&gt;Myrcella</title>
@@ -697,7 +697,7 @@
 <!-- Tommen -->
 <g id="node59" class="node"><title>Tommen</title>
 <polygon fill="white" stroke="#cccccc" points="1041,-566 861,-566 861,-530 1041,-530 1041,-566"/>
-<text text-anchor="middle" x="951" y="-543.8" font-family="sans-serif" font-size="14.00">Tommen</text>
+<text text-anchor="middle" x="951" y="-543.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Tommen</text>
 </g>
 <!-- siblings_5_2&#45;&gt;Tommen -->
 <g id="edge58" class="edge"><title>siblings_5_2&#45;&gt;Tommen</title>
@@ -732,7 +732,7 @@
 <!-- Tywin -->
 <g id="node61" class="node"><title>Tywin</title>
 <polygon fill="white" stroke="#cccccc" points="479,-636 299,-636 299,-600 479,-600 479,-636"/>
-<text text-anchor="middle" x="389" y="-613.8" font-family="sans-serif" font-size="14.00">Tywin</text>
+<text text-anchor="middle" x="389" y="-613.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Tywin</text>
 </g>
 <!-- Tywin&#45;&gt;union_5 -->
 <g id="edge59" class="edge"><title>Tywin&#45;&gt;union_5</title>
@@ -741,7 +741,7 @@
 <!-- Joanna -->
 <g id="node62" class="node"><title>Joanna</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-582 299,-582 299,-546 479,-546 479,-582"/>
-<text text-anchor="middle" x="389" y="-559.8" font-family="sans-serif" font-size="14.00">Joanna</text>
+<text text-anchor="middle" x="389" y="-559.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Joanna</text>
 </g>
 <!-- Joanna&#45;&gt;union_5 -->
 <g id="edge60" class="edge"><title>Joanna&#45;&gt;union_5</title>
@@ -780,8 +780,8 @@
 <!-- Hoster -->
 <g id="node65" class="node"><title>Hoster</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="198,-342 18,-342 18,-300 198,-300 198,-342"/>
-<text text-anchor="start" x="89.3415" y="-323.4" font-family="sans-serif" font-size="14.00">Hoster</text>
-<text text-anchor="start" x="82.589" y="-309" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Hoster Tully</text>
+<text text-anchor="start" x="87.8885" y="-323.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Hoster</text>
+<text text-anchor="start" x="81.835" y="-309" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Hoster Tully</text>
 </g>
 <!-- Hoster&#45;&gt;union_6 -->
 <g id="edge65" class="edge"><title>Hoster&#45;&gt;union_6</title>
@@ -790,8 +790,8 @@
 <!-- Minisa -->
 <g id="node66" class="node"><title>Minisa</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="198,-282 18,-282 18,-240 198,-240 198,-282"/>
-<text text-anchor="start" x="88.5575" y="-263.4" font-family="sans-serif" font-size="14.00">Minisa</text>
-<text text-anchor="start" x="79.534" y="-249" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Minisa Whent</text>
+<text text-anchor="start" x="87.7805" y="-263.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Minisa</text>
+<text text-anchor="start" x="77.7205" y="-249" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Minisa Whent</text>
 </g>
 <!-- Minisa&#45;&gt;union_6 -->
 <g id="edge66" class="edge"><title>Minisa&#45;&gt;union_6</title>
@@ -806,7 +806,7 @@
 <!-- Lysa -->
 <g id="node68" class="node"><title>Lysa</title>
 <polygon fill="white" stroke="#cccccc" points="479,-313 299,-313 299,-277 479,-277 479,-313"/>
-<text text-anchor="middle" x="389" y="-290.8" font-family="sans-serif" font-size="14.00">Lysa</text>
+<text text-anchor="middle" x="389" y="-290.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Lysa</text>
 </g>
 <!-- siblings_6&#45;&gt;Lysa -->
 <g id="edge69" class="edge"><title>siblings_6&#45;&gt;Lysa</title>
@@ -817,7 +817,7 @@
 <!-- Edmure -->
 <g id="node69" class="node"><title>Edmure</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-367 299,-367 299,-331 479,-331 479,-367"/>
-<text text-anchor="middle" x="389" y="-344.8" font-family="sans-serif" font-size="14.00">Edmure</text>
+<text text-anchor="middle" x="389" y="-344.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Edmure</text>
 </g>
 <!-- siblings_6&#45;&gt;Edmure -->
 <g id="edge70" class="edge"><title>siblings_6&#45;&gt;Edmure</title>
@@ -828,7 +828,7 @@
 <!-- Robin Arryn -->
 <g id="node70" class="node"><title>Robin Arryn</title>
 <polygon fill="white" stroke="#cccccc" points="479,-205 299,-205 299,-169 479,-169 479,-205"/>
-<text text-anchor="middle" x="389" y="-182.8" font-family="sans-serif" font-size="14.00">Robin Arryn</text>
+<text text-anchor="middle" x="389" y="-182.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Robin Arryn</text>
 </g>
 <!-- siblings_6&#45;&gt;Robin Arryn -->
 <g id="edge71" class="edge"><title>siblings_6&#45;&gt;Robin Arryn</title>
@@ -839,7 +839,7 @@
 <!-- Brynden -->
 <g id="node71" class="node"><title>Brynden</title>
 <polygon fill="#f4f4f4" stroke="#cccccc" stroke-width="0" points="479,-259 299,-259 299,-223 479,-223 479,-259"/>
-<text text-anchor="middle" x="389" y="-236.8" font-family="sans-serif" font-size="14.00">Brynden</text>
+<text text-anchor="middle" x="389" y="-236.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Brynden</text>
 </g>
 <!-- siblings_6&#45;&gt;Brynden -->
 <g id="edge72" class="edge"><title>siblings_6&#45;&gt;Brynden</title>
@@ -858,8 +858,8 @@
 <!-- Drogo -->
 <g id="node75" class="node"><title>Drogo</title>
 <polygon fill="#f4f4e0" stroke="#cccccc" stroke-width="0" points="479,-1872 299,-1872 299,-1830 479,-1830 479,-1872"/>
-<text text-anchor="start" x="371.616" y="-1853.4" font-family="sans-serif" font-size="14.00">Drogo</text>
-<text text-anchor="start" x="365.757" y="-1839" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Khal Drogo</text>
+<text text-anchor="start" x="369.942" y="-1853.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Drogo</text>
+<text text-anchor="start" x="363.995" y="-1839" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Khal Drogo</text>
 </g>
 <!-- Drogo&#45;&gt;union_9 -->
 <g id="edge78" class="edge"><title>Drogo&#45;&gt;union_9</title>
@@ -868,8 +868,8 @@
 <!-- Littlefinger -->
 <g id="node77" class="node"><title>Littlefinger</title>
 <polygon fill="#f4f4e0" stroke="#cccccc" stroke-width="0" points="479,-456 299,-456 299,-414 479,-414 479,-456"/>
-<text text-anchor="start" x="357.622" y="-437.4" font-family="sans-serif" font-size="14.00">Littlefinger</text>
-<text text-anchor="start" x="334.601" y="-423" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Petyr &quot;Littlefinger&quot; Baelish</text>
+<text text-anchor="start" x="356.717" y="-437.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Littlefinger</text>
+<text text-anchor="start" x="331.553" y="-423" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Petyr &quot;Littlefinger&quot; Baelish</text>
 </g>
 <!-- Littlefinger&#45;&gt;union_10 -->
 <g id="edge80" class="edge"><title>Littlefinger&#45;&gt;union_10</title>
@@ -878,8 +878,8 @@
 <!-- Daario -->
 <g id="node81" class="node"><title>Daario</title>
 <polygon fill="#f4f4e0" stroke="#cccccc" stroke-width="0" points="479,-1601 299,-1601 299,-1559 479,-1559 479,-1601"/>
-<text text-anchor="start" x="369.957" y="-1582.4" font-family="sans-serif" font-size="14.00">Daario</text>
-<text text-anchor="start" x="358.601" y="-1568" font-family="sans-serif" font-size="10.00" fill="#aaaaaa">Daario Naharis</text>
+<text text-anchor="start" x="368.389" y="-1582.4" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Daario</text>
+<text text-anchor="start" x="355.666" y="-1568" font-family="Helvetica, Arial, sans-serif" font-size="10.00" fill="#aaaaaa">Daario Naharis</text>
 </g>
 <!-- Daario&#45;&gt;union_13 -->
 <g id="edge86" class="edge"><title>Daario&#45;&gt;union_13</title>
@@ -888,7 +888,7 @@
 <!-- Melisandre -->
 <g id="node83" class="node"><title>Melisandre</title>
 <polygon fill="#f4f4e0" stroke="#cccccc" stroke-width="0" points="760,-456 580,-456 580,-420 760,-420 760,-456"/>
-<text text-anchor="middle" x="670" y="-433.8" font-family="sans-serif" font-size="14.00">Melisandre</text>
+<text text-anchor="middle" x="670" y="-433.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Melisandre</text>
 </g>
 <!-- Melisandre&#45;&gt;union_14 -->
 <g id="edge88" class="edge"><title>Melisandre&#45;&gt;union_14</title>

@@ -47,7 +47,6 @@ Spoiler alerts, view at your own risk :)
 > ![](examples/got.png)
 </details>
 
-
 Getting started
 ---------------
 
