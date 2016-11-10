@@ -183,7 +183,10 @@ function renderFamily (data, house, family, path) {
   }
 
   function renderSubFamilies () {
-    const families = family.families || []
+    // Reverse the families, because we assume people put "deeper" families last.
+    // You want to render the deeper families first so that their parents are placed
+    // in those families, rather than the parent families.
+    const families = [].concat(family.families || []).reverse()
     return families.map((f, idx) => renderFamily(data, house, f, path.concat(idx)))
   }
 

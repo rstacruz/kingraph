@@ -51,6 +51,12 @@ To create second generations, you can simply add another `Family` record.
 
 Preferably, you can make them a sub-family. This can help untangle things.
 
+<details>
+<summary>Why nest?<summary>
+
+Nesting families is more of a visual designation rather than a semantic one.
+</details>
+
 ```diff
  families:
    - parents: [Marge, Homer]
