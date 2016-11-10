@@ -88,13 +88,13 @@ To create second generations, you can simply add another record to `families`.
 Turn a family into a house by adding a `house` name. They will show up grouped in a box.
 
 ```diff
-families:
-  - house: Stark
-    parents: [Ned, Catelyn]
-    children: [Arya, Rickon, Bran, Sansa, Rob]
-  - house: Lannister
-    parents: [Tywin, Joanna]
-    children: [Cersei, Jaime, Tyrion]
+ families:
++  - house: Stark
+     parents: [Ned, Catelyn]
+     children: [Arya, Rickon, Bran, Sansa, Rob]
++  - house: Lannister
+     parents: [Tywin, Joanna]
+     children: [Cersei, Jaime, Tyrion]
 ```
 
 To add families into a house, nest the families.
