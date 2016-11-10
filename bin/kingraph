@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const render = require('../index')
+const render = require('../lib/render')
+const all = Promise.all.bind(Promise)
 
 const cli = require('meow')(`
   Usage:
@@ -19,16 +20,15 @@ const cli = require('meow')(`
 
 require('read-input')(cli.input)
 .then(res => {
-  res.files.forEach(file => {
-    var input = require('js-yaml').safeLoad(file.data)
-    if (cli.flags.format === 'dot') {
-      console.log(render(input))
-    } else {
-      var dot = render(input)
-      var svg = require('viz.js')(dot, { format: 'svg', engine: 'dot' })
-      console.log(svg)
-    }
-  })
+  return all(res.files.map(file => {
+    const input = require('js-yaml').safeLoad(file.data)
+    const format = cli.flags.format || 'svg'
+
+    return render(input, { format, async: true })
+      .then(result => {
+        process.stdout.write(result)
+      })
+  }))
 })
 .catch(err => {
   console.error(err)

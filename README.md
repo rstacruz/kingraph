@@ -30,7 +30,7 @@ Spoiler alerts, view at your own risk :)
 <details>
 <summary>**Simpsons** (simple) · *[source](examples/simpsons.yml)*</summary>
 
-> ![](examples/simpsons.svg)
+> ![](examples/simpsons.png)
 </details>
 
 <details>
@@ -38,13 +38,13 @@ Spoiler alerts, view at your own risk :)
 
 
 
-> ![](examples/potter.svg)
+> ![](examples/potter.png)
 </details>
 
 <details>
 <summary>**Game of Thrones** (overly complicated) · *[source](examples/got.yml)*</summary>
 
-> ![](examples/got.svg)
+> ![](examples/got.png)
 </details>
 
 

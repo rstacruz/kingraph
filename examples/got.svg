@@ -11,15 +11,15 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-1884 1099,-1884 1099,4 -4,4"/>
 <g id="clust1" class="cluster"><title>cluster_family_0</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="253,-1611 253,-1820 489,-1820 489,-1611 253,-1611"/>
-<text text-anchor="start" x="261" y="-1802.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Targaryen</text>
+<text text-anchor="start" x="261" y="-1802.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Targaryen</text>
 </g>
 <g id="clust3" class="cluster"><title>cluster_family_1</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="289,-789 289,-1034 770,-1034 770,-789 289,-789"/>
-<text text-anchor="start" x="297" y="-1016.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Greyjoy</text>
+<text text-anchor="start" x="297" y="-1016.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Greyjoy</text>
 </g>
 <g id="clust6" class="cluster"><title>cluster_family_2</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="8,-1042 8,-1549 806,-1549 806,-1042 8,-1042"/>
-<text text-anchor="start" x="16" y="-1531.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Stark</text>
+<text text-anchor="start" x="16" y="-1531.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Stark</text>
 </g>
 <g id="clust7" class="cluster"><title>cluster_family_2_0</title>
 </g>
@@ -29,11 +29,11 @@
 </g>
 <g id="clust18" class="cluster"><title>cluster_family_3</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="534,-8 534,-145 770,-145 770,-8 534,-8"/>
-<text text-anchor="start" x="542" y="-127.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Tyrell</text>
+<text text-anchor="start" x="542" y="-127.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Tyrell</text>
 </g>
 <g id="clust20" class="cluster"><title>cluster_family_4</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="534,-153 534,-410 1051,-410 1051,-153 534,-153"/>
-<text text-anchor="start" x="542" y="-392.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Barratheon</text>
+<text text-anchor="start" x="542" y="-392.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Barratheon</text>
 </g>
 <g id="clust21" class="cluster"><title>cluster_family_4_0</title>
 </g>
@@ -43,7 +43,7 @@
 </g>
 <g id="clust30" class="cluster"><title>cluster_family_5</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="289,-466 289,-781 1051,-781 1051,-466 289,-466"/>
-<text text-anchor="start" x="297" y="-763.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Lannister</text>
+<text text-anchor="start" x="297" y="-763.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Lannister</text>
 </g>
 <g id="clust31" class="cluster"><title>cluster_family_5_0</title>
 </g>
@@ -53,7 +53,7 @@
 </g>
 <g id="clust41" class="cluster"><title>cluster_family_6</title>
 <polygon fill="#fafafa" stroke="#fafafa" points="8,-159 8,-404 489,-404 489,-159 8,-159"/>
-<text text-anchor="start" x="16" y="-386.6" font-family="sans-serif" font-weight="bold" font-size="16.00">Tully</text>
+<text text-anchor="start" x="16" y="-386.6" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="16.00">Tully</text>
 </g>
 <g id="clust44" class="cluster"><title>cluster_family_7</title>
 </g>
@@ -896,4 +896,3 @@
 </g>
 </g>
 </svg>
-
