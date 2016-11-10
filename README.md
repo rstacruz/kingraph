@@ -6,10 +6,19 @@ A family tree plotter with a very simple syntax. It probably doesn't cover every
 
 ![](docs/images/example.png)
 
-Usage
------
+Installation
+------------
 
+```sh
+npm install -g rstacruz/kingraph
+# or
+yarn global add rstacruz/kingraph  # via yarnpkg.com
 ```
+
+This adds the `kingraph` command to your shell.
+
+```sh
+kingraph --help
 kingraph family.yml > family.svg
 ```
 
