@@ -76,7 +76,7 @@ To add families into a house, nest the families.
 ```
 
 <details>
-<summary>Why nest?<summary>
+<summary>*Why nest?*</summary>
 
 Families can be placed as sub-families of another families. This is more of a visual designation rather than a semantic one. If the parent family is a "house", then the sub-families will show up in the same house.
 

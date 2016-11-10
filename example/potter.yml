@@ -1,0 +1,66 @@
+families:
+  - house: Potter
+    parents: [James, Lily]
+    children: [Harry]
+    links:
+      - http://harrypotter.wikia.com/wiki/Potter_family
+    families:
+      - parents: [Harry, Ginny]
+        children: [James II, Lily II, Albus]
+
+  - house: Dursley
+    parents: [Vernon, Petunia]
+    children: [Dudley]
+    children2: [Harry]
+
+  - house: Weasley
+    parents: [Arthur, Molly]
+    children: [Ron, Fred, George, Ginny, Bill]
+    families:
+      - parents: [Ron, Hermione]
+        children: [Rose, Hugo]
+      - parents: [George, Angelina]
+      - parents: [Bill, Fleur]
+        children: [Victoire, Dominique, Louis]
+
+  - house: Granger
+    parents: [Mr Granger, Mrs Granger]
+    children: [Hermione]
+
+  - children: [Petunia, Lily]
+
+people:
+  James:
+    fullname: James Potter I
+    links:
+      - http://harrypotter.wikia.com/wiki/James_Potter_I
+  Lily:
+    fullname: Lily Evans
+    class: [muggleborn]
+    links:
+      - http://harrypotter.wikia.com/wiki/Lily_J._Potter
+  Fleur:
+    fullname: Fleur Delacour
+    links:
+      - http://harrypotter.wikia.com/wiki/Fleur_Delacour
+  Ron:
+    fullname: Ron Weasley
+    links:
+      - http://harrypotter.wikia.com/wiki/Ronald_Weasley
+  Hermione:
+    fullname: Hermione Granger
+    class: [muggleborn]
+    links:
+      - http://harrypotter.wikia.com/wiki/Hermione_Granger
+  Mr Granger:
+    class: [muggle]
+  Mrs Granger:
+    class: [muggle]
+  Vernon:
+    class: [muggle]
+  Petunia:
+    class: [muggle]
+
+styles:
+  muggleborn:
+    penstyle: dashed

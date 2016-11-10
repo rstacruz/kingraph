@@ -91,7 +91,7 @@ function renderPerson (data, house, person, path) {
       '<font point-size="10" color="#aaaaaa">' +
       `${person.fullname || person.name}</font></td></tr></table>>`
   } else {
-    label = escape(id)
+    label = id
   }
 
   return [
@@ -137,7 +137,7 @@ function renderFamily (data, house, family, path) {
   const housename = family.house
 
   const hasParents = (parents.length + parents2.length) > 0
-  const hasChildren = (children.length + children.length) > 0
+  const hasChildren = (children.length + children2.length) > 0
   const hasManyChildren = (children.length + children.length) > 1
 
   const union = `union_${slug}`
@@ -172,7 +172,7 @@ function renderFamily (data, house, family, path) {
       .concat(parents)
       .concat(children)
 
-    return `{${list.join('; ')}}`
+    return `{${list.map(escape).join('; ')}}`
   }
 
   function renderHousePrelude () {
