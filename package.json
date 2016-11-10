@@ -1,27 +1,32 @@
 {
-  "name": "family-tree",
+  "name": "kingraph",
+  "description": "Plots family trees using JavaScript and Graphviz",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "tape lib/**/*.test.js"
-  },
-  "bin": {
-    "family-tree": "bin/family-tree"
-  },
-  "keywords": [],
   "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
-  "license": "MIT",
+  "bin": {
+    "kingraph": "bin/kingraph"
+  },
   "dependencies": {
     "js-yaml": "3.6.1",
     "meow": "3.7.0",
-    "object-assign": "^4.1.0",
+    "object-assign": "4.1.0",
     "object-loops": "0.8.0",
     "read-input": "0.3.1",
     "strip-indent": "2.0.0",
-    "viz.js": "^1.3.0"
+    "viz.js": "1.3.0"
   },
   "devDependencies": {
     "tape": "4.6.2"
+  },
+  "keywords": [
+    "ancestry",
+    "family",
+    "family tree",
+    "genealogy"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape lib/**/*.test.js"
   }
 }

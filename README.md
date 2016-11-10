@@ -1,4 +1,4 @@
-# family-tree
+# kingraph
 
 > 👪 Plots family trees using JavaScript and Graphviz
 
@@ -10,7 +10,7 @@ Usage
 -----
 
 ```
-family-tree family.yml > family.svg
+kingraph family.yml > family.svg
 ```
 
 Examples
@@ -162,7 +162,7 @@ For further reading:
 
 ## Thanks
 
-**family-tree** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
+**kingraph** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
 Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
 
 > [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
@@ -170,4 +170,4 @@ Authored and maintained by Rico Sta. Cruz with help from contributors ([list][co
 > Twitter [@rstacruz](https://twitter.com/rstacruz)
 
 [MIT]: http://mit-license.org/
-[contributors]: http://github.com/rstacruz/family-tree/contributors
+[contributors]: http://github.com/rstacruz/kingraph/contributors

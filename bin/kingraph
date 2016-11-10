@@ -3,7 +3,7 @@ const render = require('../index')
 
 const cli = require('meow')(`
   Usage:
-    $ family-tree
+    $ kingraph INPUT.yml
 
   Options:
     -h, --help         show usage information
