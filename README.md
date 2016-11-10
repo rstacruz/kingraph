@@ -119,8 +119,8 @@ It also helps to untangle your YAML file.
 
 See [advanced usage](docs/advanced.md) for more features.
 
-Further documentation
----------------------
+Documentation
+-------------
 
 For further reading:
 
