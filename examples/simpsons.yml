@@ -1,8 +1,10 @@
-options:
-  label_format: |
-    %{name.nick} %{name.surname}<br /><font color="gray">%{years}</font>
-  name_format:
-    2: [nick, surname]
+families:
+  - parents: [Homer, Marge]
+    children: [Bart, Lisa, Maggie]
+  - parents: [Abe, Mona]
+    children: [Homer]
+  - parents: [Jacqueline, Clancy]
+    children: [Marge, Patty, Selma]
 
 people:
   Bart:
@@ -50,10 +52,3 @@ people:
     fullname: Clancy Bouvier
     gender: m
 
-families:
-  - parents: [Homer, Marge]
-    children: [Bart, Lisa, Maggie]
-  - parents: [Abe, Mona]
-    children: [Homer]
-  - parents: [Jacqueline, Clancy]
-    children: [Marge, Patty, Selma]

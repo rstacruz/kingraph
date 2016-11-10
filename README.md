@@ -1,6 +1,6 @@
 # family-tree
 
-> Plots family trees using JavaScript and Graphviz
+> 👪 Plots family trees using JavaScript and Graphviz
 
 A family tree plotter with a very simple syntax. It probably doesn't cover everything you need, but covers 90% of it for the sake of simplicity.
 
@@ -12,6 +12,32 @@ Usage
 ```
 family-tree family.yml > family.svg
 ```
+
+Examples
+--------
+
+Spoiler alerts, view at your own risk :)
+
+<details>
+<summary>**Simpsons** (simple) · *[source](examples/simpsons.yml)*</summary>
+
+> ![](examples/simpsons.svg)
+</details>
+
+<details>
+<summary>**Harry Potter** (larger tree) · *[source](examples/potter.yml)*</summary>
+
+
+
+> ![](examples/potter.svg)
+</details>
+
+<details>
+<summary>**Game of Thrones** (overly complicated) · *[source](examples/got.yml)*</summary>
+
+> ![](examples/got.svg)
+</details>
+
 
 Getting started
 ---------------
