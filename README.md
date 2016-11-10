@@ -16,7 +16,7 @@ family-tree family.yml > family.svg
 Getting started
 ---------------
 
-Let's start with `families`. Every family can have `parents` and `children`.
+A family tree is a [YAML](http://yaml.org/) file. Start with a `families` collection. Every family can have `parents` and `children`.
 
 ```diff
 +families:
@@ -39,7 +39,7 @@ To define their full names, add a `people` collection. This is optional—people
 
 ### Second generations
 
-To create second generations, you can simply add another `Family` record.
+To create second generations, you can simply add another record to `families`.
 
 ```diff
  families:
@@ -47,23 +47,6 @@ To create second generations, you can simply add another `Family` record.
      children: [Bart, Lisa, Maggie]
 +  - parents: [Lisa, Milhouse]
 +    children: [Zia]
-```
-
-Preferably, you can make them a sub-family. This can help untangle things.
-
-<details>
-<summary>Why nest?<summary>
-
-Nesting families is more of a visual designation rather than a semantic one.
-</details>
-
-```diff
- families:
-   - parents: [Marge, Homer]
-     children: [Bart, Lisa, Maggie]
-+    families:
-+      - parents: [Lisa, Milhouse]
-+        children: [Zia]
 ```
 
 ### Houses
@@ -79,6 +62,26 @@ families:
     parents: [Tywin, Joanna]
     children: [Cersei, Jaime, Tyrion]
 ```
+
+To add families into a house, nest the families.
+
+```diff
+ families:
+   - house: Simpson
+     parents: [Marge, Homer]
+     children: [Bart, Lisa, Maggie]
++    families:
++      - parents: [Lisa, Milhouse]
++        children: [Zia]
+```
+
+<details>
+<summary>Why nest?<summary>
+
+Families can be placed as sub-families of another families. This is more of a visual designation rather than a semantic one. If the parent family is a "house", then the sub-families will show up in the same house.
+
+It also helps to untangle your YAML file.
+</details>
 
 More features
 -------------
@@ -96,9 +99,23 @@ families:
     children2: [Jon]
 ```
 
+### Expressing relationships
+
+All properties in a `Family` are optional (but you have to define at least one). You can use these to show other types of relationships.
+
+```yml
+families:
+  # These guys are having an affair of sorts
+  - parents2: [Loras, Renly]
+
+  # No need to show their parents in the family tree,
+  # but we want them to show up as siblings.
+  - children: [Danaerys, Viserys, Rhaegar]
+```
+
 ## Styling
 
-Use `class` and `style` to style. Refer to Graphviz'z [attributes documentation](http://graphviz.org/doc/info/attrs.html) for possible attributes.
+Use `class` and `style` to style. Refer to Graphviz's [attributes documentation](http://graphviz.org/doc/info/attrs.html) for possible attributes.
 
 ```yml
 people:
@@ -109,4 +126,22 @@ styles:
   deceased:
     color: red
 ```
- 
+
+Further documentation
+---------------------
+
+For further reading:
+
+- [Schema](docs/schema.md)
+
+## Thanks
+
+**family-tree** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
+Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
+
+> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
+> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
+> Twitter [@rstacruz](https://twitter.com/rstacruz)
+
+[MIT]: http://mit-license.org/
+[contributors]: http://github.com/rstacruz/family-tree/contributors
