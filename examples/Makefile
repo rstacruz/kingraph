@@ -1,4 +1,4 @@
-all: got.svg simpsons.svg potter.svg got.png simpsons.png potter.png
+all: got.svg simpsons.svg potter.svg got.png simpsons.png potter.png modernfamily.png
 
 open: all
 	open *.svg -a "Google Chrome"

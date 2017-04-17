@@ -28,19 +28,33 @@ Examples
 Spoiler alerts, view at your own risk :)
 
 <details>
-<summary>**Simpsons** (simple) · *[source](examples/simpsons.yml)*</summary>
+<summary><b>Simpsons</b> (simple)</summary>
+
+Source: *[simpsons.yml](examples/simpsons.yml)*
 
 > ![](examples/simpsons.png)
 </details>
 
 <details>
-<summary>**Harry Potter** (larger tree) · *[source](examples/potter.yml)*</summary>
+<summary><b>Modern Family</b> (simple with houses)</summary>
+
+Source: *[modernfamily.yml](examples/modernfamily.yml)*
+
+> ![](examples/modernfamily.png)
+</details>
+
+<details>
+<summary><b>Harry Potter</b> (larger tree)</summary>
+
+Source: *[potter.yml](examples/potter.yml)*
 
 > ![](examples/potter.png)
 </details>
 
 <details>
-<summary>**Game of Thrones** (overly complicated) · *[source](examples/got.yml)*</summary>
+<summary><b>Game of Thrones</b> (overly complicated)</summary>
+
+Source: *[got.yml](examples/got.yml)*
 
 > ![](examples/got.png)
 </details>

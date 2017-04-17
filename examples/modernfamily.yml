@@ -1,0 +1,26 @@
+families:
+  - house: Pritchett
+    families:
+    - parents: [Jay, Gloria]
+      children: [Joe]
+    - parents: [Gloria]
+      children: [Manny]
+  - house: Dunphy
+    families:
+      - parents: [Phil, Claire]
+        children: [Alex, Luke, Haley]
+  - house: Tucker
+    families:
+      - parents: [Cam, Mitchell]
+        children2: [Lily]
+
+  - parents: [Jay, Dede]
+    children: [Claire, Mitchell]
+people:
+  Dede:
+    class: [minor]
+styles:
+  minor:
+    style: "filled"
+    fillcolor: "#f4f4f4"
+    penwidth: 0
