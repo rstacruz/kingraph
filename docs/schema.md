@@ -23,10 +23,21 @@ A list of families. All properties in a Family are optional, but you have to def
 
 ```yaml
 families:
-- parents: [Homer, Marge]
-  children: [Bart, Lisa, Maggie]
-- parents: [Lisa, Milhouse]
-  children: [Zia]
+  - parents: [Homer, Marge]
+    children: [Bart, Lisa, Maggie]
+  - parents: [Lisa, Milhouse]
+    children: [Zia]
+```
+
+A typical family has `parents` and `children`, but only one is required. Every family must have at least one or more of the required properties defined (`parents`, `parents2`, `children`, `children2`).
+
+```yaml
+families:
+  # Example: no children
+  - parents: [Cam, Mitchell]
+
+  # Example: siblings with unknown parents
+  - children: [Haley, Luke, Alex]
 ```
 
 ### parents
@@ -45,7 +56,7 @@ A list of children. See [Family](#family) for an example.
 
 > `families[].parents2` (String[])
 
-A list of parents. Use this to express non-typical lineage such as step-parents. See [Family](#family) for an example.
+A list of parents. Use this to express atypical lineage, such as step-parents. See [Family](#family) for an example.
 
 ```yaml
 # Cersei and Jaime are the biological parents.
@@ -59,7 +70,7 @@ A list of parents. Use this to express non-typical lineage such as step-parents.
 
 > `families[].children2` (String[])
 
-A list of children. Use this to express non-typical children such as illegitimate children or foster siblings. See [parents2](#parents2) for an example.
+A list of children. Use this to express atypical offspring lineage, such as illegitimate children or foster siblings. See [parents2](#parents2) for an example.
 
 
 ```yaml
