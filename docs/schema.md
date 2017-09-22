@@ -56,7 +56,7 @@ A list of children. See [Family](#family) for an example.
 
 > `families[].parents2` (String[])
 
-A list of parents. Use this to express atypical lineage, such as step-parents. See [Family](#family) for an example.
+A list of parents. Use this to express atypical lineage, such as step-parents or adoptive parents. See [Family](#family) for an example.
 
 ```yaml
 # Cersei and Jaime are the biological parents.
@@ -70,7 +70,7 @@ A list of parents. Use this to express atypical lineage, such as step-parents. S
 
 > `families[].children2` (String[])
 
-A list of children. Use this to express atypical offspring lineage, such as illegitimate children or foster siblings. See [parents2](#parents2) for an example.
+A list of children. Use this to express atypical offspring lineage, such as adoptions, illegitimate children or foster siblings. See [parents2](#parents2) for an example.
 
 
 ```yaml
