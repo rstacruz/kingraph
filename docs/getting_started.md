@@ -79,4 +79,4 @@ It also helps to untangle your YAML file.
 
 ## Next
 
-See [advanced usage](docs/advanced.md) for more features.
+See [advanced usage](advanced.md) for more features.
