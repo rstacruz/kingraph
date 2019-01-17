@@ -22,6 +22,15 @@ kingraph --help
 kingraph family.yml > family.svg
 ```
 
+Docker
+------
+
+You can also run `kingraph` with docker.
+
+```sh
+docker run --rm -v $(pwd):/data rstacruz/kingraph family.yml > family.svg
+```
+
 Examples
 --------
 
