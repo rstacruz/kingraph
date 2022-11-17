@@ -1,5 +1,5 @@
 {
-  "name": "kingraph",
+  "name": "@kingraph/kingraph",
   "description": "Plots family trees using JavaScript and Graphviz",
   "version": "0.1.0",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com> (https://ricostacruz.com)",

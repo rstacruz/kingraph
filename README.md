@@ -10,9 +10,9 @@ Installation
 ------------
 
 ```sh
-npm install -g rstacruz/kingraph
+npm install -g @kingraph/kingraph
 # or
-yarn global add rstacruz/kingraph  # via yarnpkg.com
+yarn global add @kingraph/kingraph  # via yarnpkg.com
 ```
 
 This adds the `kingraph` command to your shell.
