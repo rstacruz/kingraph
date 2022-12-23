@@ -1,8 +1,12 @@
 {
-  "name": "kingraph",
+  "name": "@kingraph/kingraph",
   "description": "Plots family trees using JavaScript and Graphviz",
   "version": "0.1.0",
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
+  "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com> (https://ricostacruz.com)",
+  "homepage": "https://github.com/kingraph-diagram/kingraph",
+  "bugs": {
+    "url": "https://github.com/kingraph-diagram/kingraph/issues"
+  },
   "bin": {
     "kingraph": "bin/kingraph"
   },
